@@ -5,6 +5,7 @@ module.exports = {
     description: `Paranoid_K's Personal Blog.`,
     siteUrl: `https://pengtikui.cn`,
   },
+  pathPrefix: '/',
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
@@ -39,6 +40,12 @@ module.exports = {
           `gatsby-remark-prismjs`,
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
+          {
+            resolve: `gatsby-remark-external-links`,
+            options: {
+              target: `_blank`,
+            },
+          },
         ],
       },
     },
@@ -51,19 +58,6 @@ module.exports = {
       },
     },
     `gatsby-plugin-feed`,
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `Paranoid_K's Blog`,
-        short_name: `Paranoid_K`,
-        start_url: `/`,
-        background_color: `#ffffff`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `content/assets/profile-pic.jpg`,
-      },
-    },
-    `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-typography`,
