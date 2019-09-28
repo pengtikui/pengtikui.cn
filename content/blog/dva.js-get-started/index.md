@@ -2,6 +2,10 @@
 title: dva.js 上手
 date: 2018-01-27 18:08:20
 description: dva.js 简单上手体验
+tags:
+  - dva.js
+  - React
+  - Redux
 ---
 
 dva.js 是一个基于 redux、redux-saga 和 react-router 的轻量级前端框架。

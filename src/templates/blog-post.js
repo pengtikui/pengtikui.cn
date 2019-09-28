@@ -39,6 +39,16 @@ class BlogPostTemplate extends React.Component {
             </p>
           </header>
           <section dangerouslySetInnerHTML={{ __html: post.html }} />
+          {post.fields.tags && (
+            <div style={{ display: 'flex' }}>
+              <p style={{ marginRight: '5px' }}>标签:</p>
+              {post.fields.tags.map(tag => (
+                <span key={tag} style={{ padding: '0 2px' }}>
+                  #{tag}
+                </span>
+              ))}
+            </div>
+          )}
           <hr
             style={{
               marginBottom: rhythm(1),
@@ -98,6 +108,9 @@ export const pageQuery = graphql`
         title
         date(formatString: "MM.DD, YYYY")
         description
+      }
+      fields {
+        tags
       }
     }
   }
