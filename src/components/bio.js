@@ -51,7 +51,7 @@ const Bio = () => {
         }}
       />
       <p>
-        <strong>{author}</strong>, 一个普通人
+        <strong>{author}</strong>
         <br />
         <span>#stayparanoid</span>
       </p>
