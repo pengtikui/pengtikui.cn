@@ -71,5 +71,8 @@ module.exports = {
         templatePath: `${__dirname}/src/templates/tags.js`,
       },
     },
+    {
+      resolve: `gatsby-plugin-no-sourcemaps`,
+    },
   ],
 };
