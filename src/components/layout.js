@@ -68,6 +68,8 @@ class Layout extends React.Component {
           <a href="https://www.gatsbyjs.org" target="__blank">
             Gatsby
           </a>
+          <br />
+          <a style={{ fontSize: 14 }} href="http://www.beian.miit.gov.cn" target="__blank">鲁ICP备15010597号-1</a>
         </footer>
       </div>
     );
