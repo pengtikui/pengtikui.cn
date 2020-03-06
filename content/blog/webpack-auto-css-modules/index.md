@@ -26,7 +26,7 @@ const App = () => (
 
 ## 缘由
 
-用后缀名区分的方案一直没觉得有什么不妥，只是文件名有点长，不够优雅。直到前几天看到 Umi 发布了 3.0 版本，出于好奇随便翻了翻文档，发现了一个特别有意思的功能：
+用后缀名区分的方案一直没觉得有什么不妥，只是文件名有点长，不够优雅。直到前几天看到 [Umi](https://umijs.org/) 发布了 3.0 版本，出于好奇随便翻了翻文档，发现了一个特别有意思的功能：
 
 > Umi 会自动识别 CSS Modules 的使用，你把他当做 CSS Modules 用时才是 CSS Modules。
 >
@@ -157,6 +157,8 @@ module.exports = () => {
 简略的配置如下：
 
 ```javascript
+// webpack.config.js
+
 module.exports = {
   modules: {
     rules: {
