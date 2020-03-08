@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Paranoid_K's Blog`,
     author: `Paranoid_K`,
-    description: `Paranoid_K's Personal Blog.`,
+    description: `Paranoid_K's Personal Blog`,
     siteUrl: `https://pengtikui.cn`,
   },
   pathPrefix: '/',
@@ -55,6 +55,13 @@ module.exports = {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: `UA-74390371-1`,
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-baidu-analytics',
+      options: {
+        siteId: 'e1d448816c80aebb0aec52056ff503d9',
+        head: true,
       },
     },
     `gatsby-plugin-feed`,
