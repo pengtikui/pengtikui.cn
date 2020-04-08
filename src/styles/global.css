@@ -1,0 +1,6 @@
+.gatsby-highlight {
+  margin-bottom: 1.75em;
+}
+.gatsby-highlight + .gatsby-highlight {
+  margin-top: -1.25em;
+}
