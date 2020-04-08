@@ -123,7 +123,7 @@ CSS in JS 就是通过 JS 的方式来写 CSS 的解决方案的统称，不特�
 
 ### 4-1. styled-components
 
-styled-components 使用模板字符串语法将 CSS 融入到 React 的组件系统，通过 JS 实现一些 CSS 原本不具备的功能，比如变量、循环和函数等，虽然这些功能可以通过 Less 或 Sass 实现，但好在 styled-components 的这写功能是通过 JS 实现的，基本不需要学习成本。
+styled-components 使用模板字符串语法将 CSS 融入到 React 的组件系统，通过 JS 实现一些 CSS 原本不具备的功能，比如变量、循环和函数等，虽然这些功能可以通过 Less 或 Sass 实现，但好在 styled-components 的这些功能是通过 JS 实现的，学习成本很低。
 
 推荐你在开始使用之前配置 `babel-plugin-styled-components` Babel 插件，它可以提供一些优化和 SSR 的支持，不过这个插件是可选的。
 
