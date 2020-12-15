@@ -1,84 +1,84 @@
 module.exports = {
   siteMetadata: {
     title: `Paranoid_K's Blog`,
-    author: `Paranoid_K`,
+    author: 'Paranoid_K',
     description: `Paranoid_K's Personal Blog`,
-    siteUrl: `https://pengtikui.cn`,
+    siteUrl: 'https://pengtikui.cn',
   },
   pathPrefix: '/',
   plugins: [
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/content/blog`,
-        name: `blog`,
+        name: 'blog',
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/content/assets`,
-        name: `assets`,
+        name: 'assets',
       },
     },
     {
-      resolve: `gatsby-transformer-remark`,
+      resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
           {
-            resolve: `gatsby-remark-mermaid`,
+            resolve: 'gatsby-remark-mermaid',
             options: {
-              language: 'graph'
-            }
+              language: 'graph',
+            },
           },
           {
-            resolve: `gatsby-remark-images`,
+            resolve: 'gatsby-remark-images',
             options: {
               maxWidth: 590,
             },
           },
           {
-            resolve: `gatsby-remark-responsive-iframe`,
+            resolve: 'gatsby-remark-responsive-iframe',
             options: {
-              wrapperStyle: `margin-bottom: 1.0725rem`,
+              wrapperStyle: 'margin-bottom: 1.0725rem',
             },
           },
-          `gatsby-remark-prismjs`,
-          `gatsby-remark-copy-linked-files`,
-          `gatsby-remark-smartypants`,
+          'gatsby-remark-prismjs',
+          'gatsby-remark-copy-linked-files',
+          'gatsby-remark-smartypants',
           {
-            resolve: `gatsby-remark-external-links`,
+            resolve: 'gatsby-remark-external-links',
             options: {
-              target: `_blank`,
+              target: '_blank',
             },
           },
         ],
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: 'gatsby-plugin-google-analytics',
       options: {
-        trackingId: `UA-74390371-1`,
+        trackingId: 'UA-74390371-1',
       },
     },
-    `gatsby-plugin-feed`,
-    `gatsby-plugin-react-helmet`,
+    'gatsby-plugin-feed',
+    'gatsby-plugin-react-helmet',
     {
-      resolve: `gatsby-plugin-typography`,
+      resolve: 'gatsby-plugin-typography',
       options: {
-        pathToConfigModule: `src/utils/typography`,
+        pathToConfigModule: 'src/utils/typography',
       },
     },
     {
-      resolve: `gatsby-plugin-tags`,
+      resolve: 'gatsby-plugin-tags',
       options: {
         templatePath: `${__dirname}/src/templates/tags.js`,
       },
     },
     {
-      resolve: `gatsby-plugin-no-sourcemaps`,
+      resolve: 'gatsby-plugin-no-sourcemaps',
     },
   ],
 };

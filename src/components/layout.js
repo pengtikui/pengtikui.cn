@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'gatsby';
-
 import { rhythm, scale } from '../utils/typography';
 
 class Layout extends React.Component {
@@ -20,11 +19,11 @@ class Layout extends React.Component {
         >
           <Link
             style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`,
+              boxShadow: 'none',
+              textDecoration: 'none',
+              color: 'inherit',
             }}
-            to={`/`}
+            to="/"
           >
             {title}
           </Link>
@@ -34,17 +33,17 @@ class Layout extends React.Component {
       header = (
         <h3
           style={{
-            fontFamily: `Montserrat, sans-serif`,
+            fontFamily: 'Montserrat, sans-serif',
             marginTop: 0,
           }}
         >
           <Link
             style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`,
+              boxShadow: 'none',
+              textDecoration: 'none',
+              color: 'inherit',
             }}
-            to={`/`}
+            to="/"
           >
             {title}
           </Link>
@@ -54,8 +53,8 @@ class Layout extends React.Component {
     return (
       <div
         style={{
-          marginLeft: `auto`,
-          marginRight: `auto`,
+          marginLeft: 'auto',
+          marginRight: 'auto',
           maxWidth: rhythm(24),
           padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
         }}
@@ -63,13 +62,18 @@ class Layout extends React.Component {
         <header>{header}</header>
         <main>{children}</main>
         <footer>
-          &copy; 2015-{new Date().getFullYear()}, Built with
-          {` `}
+          &copy; 2015-{new Date().getFullYear()}, Built with{' '}
           <a href="https://www.gatsbyjs.org" target="__blank">
             Gatsby
           </a>
           <br />
-          <a style={{ fontSize: 14 }} href="http://beian.miit.gov.cn" target="__blank">鲁ICP备15010597号-1</a>
+          <a
+            style={{ fontSize: 14 }}
+            href="http://beian.miit.gov.cn"
+            target="__blank"
+          >
+            鲁ICP备15010597号-1
+          </a>
         </footer>
       </div>
     );
