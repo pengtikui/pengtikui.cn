@@ -26,6 +26,12 @@ module.exports = {
       options: {
         plugins: [
           {
+            resolve: `gatsby-remark-mermaid`,
+            options: {
+              language: 'graph'
+            }
+          },
+          {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 590,
