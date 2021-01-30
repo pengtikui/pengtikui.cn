@@ -7,6 +7,14 @@ body {
   @apply max-w-3xl mx-auto px-4;
 }
 
+/* TailwindCSS */
+.prose code::before,
+.prose code::after,
+.prose blockquote p:first-of-type::before,
+.prose blockquote p:first-of-type::after {
+  display: none;
+}
+
 .nav-item {
   @apply transition-shadow duration-150;
   box-shadow: inset 0 -.15em 0 theme('colors.yellow.400');
