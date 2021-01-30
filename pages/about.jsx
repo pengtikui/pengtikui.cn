@@ -7,7 +7,7 @@ export default function About() {
     <>
       <PageHead />
       <AuthorHeader />
-      <div className="prose mt-10 mb-8">
+      <div className="prose dark:prose-light max-w-none mt-10 mb-8">
         <p>Paranoid_K 的个人站点。</p>
       </div>
       <DiscussionEmbed
