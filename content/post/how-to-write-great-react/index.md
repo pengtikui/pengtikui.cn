@@ -2,6 +2,8 @@
 title: 如何写出优秀的 React 代码
 date: 2019-09-30 11:44:25
 description: 本文翻译自 How to write great React，原作者通过类比《代码简洁之道》中优秀函数的五条规则来阐述如何写好一个 React 组件。
+tags:
+  - React
 ---
 
 > 本文为翻译，原文地址：[How to write great React](https://link.medium.com/o47k9T5Vl0)
