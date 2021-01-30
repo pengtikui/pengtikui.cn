@@ -11,7 +11,7 @@ tags:
   - Gatsby
 ---
 
-最近把博客从 [Gatsby](https://www.gatsbyjs.com) 迁移到了 Next.js，本文记录一下使用 [Next.js](https://nextjs.org) 从 0 到 1 搭建一个博客网站的流程，以及所使用到的一些技术 ~~(npm包)~~。
+最近把博客从 [Gatsby](https://www.gatsbyjs.com) 迁移到了 [Next.js](https://nextjs.org)，本文记录一下使用 Next.js 从 0 到 1 搭建一个博客网站的流程，以及所使用到的一些技术 ~~(npm包)~~。
 
 ## Next.js vs Gatsby
 
