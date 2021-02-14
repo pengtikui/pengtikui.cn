@@ -11,7 +11,9 @@ tags:
   - Gatsby
 ---
 
-最近把博客从 [Gatsby](https://www.gatsbyjs.com) 迁移到了 [Next.js](https://nextjs.org)，本文记录一下使用 Next.js 从 0 到 1 搭建一个博客网站的流程，以及所使用到的一些技术 ~~(npm包)~~。
+> 2021-02-15 更新：为了支持 MDX，调整了 Markdown 解析的部分逻辑，所以会有项目源码与文章部分内容不符，但不影响阅读。
+
+最近把博客从 [Gatsby](https://www.gatsbyjs.com) 迁移到了 [Next.js](https://nextjs.org)，本文记录一下使用 Next.js 从 0 到 1 搭建一个博客网站的流程，以及所使用到的一些技术 ~~(npm 包)~~。
 
 ## Next.js vs Gatsby
 
@@ -27,15 +29,15 @@ Gatsby 算是大而全的框架，有自己的插件机制和生态，各种功�
 
 [TailwindCSS](https://tailwindcss.com/) 是最近比较流行的一个 CSS 框架，它提供了大量 Utility-First 的原子类，帮你快速实现页面样式而无需手写任何 CSS 文件。个人认为 TailwindCSS 有以下几个有点：
 
-* 快速开发，无需手写 CSS；
-* 可以保证项目整体设计风格的一致性，包括颜色、边距等；
-* 设计风格更灵活、易定制，而不是像 Bootstrap 那样一眼就能认出你的页面是不是用的 Bootstrap；
-* 不需要再费尽脑汁给 class 起名了；
+- 快速开发，无需手写 CSS；
+- 可以保证项目整体设计风格的一致性，包括颜色、边距等；
+- 设计风格更灵活、易定制，而不是像 Bootstrap 那样一眼就能认出你的页面是不是用的 Bootstrap；
+- 不需要再费尽脑汁给 class 起名了；
 
 由于 TailwindCSS 是基于 PostCSS 实现的，并且 Next.js 默认内置了 PostCSS 及一些配置项，所以在 Next.js 项目中使用时需要自定义 PostCSS 的配置文件。好在修改这些配置并不繁琐，并且 TailwindCSS 官方文档提供了在 Next.js 项目中使用的教程，具体参考官方文档就好了：
 
-* [Install Tailwind CSS with Next.js](https://tailwindcss.com/docs/guides/nextjs) (TailwindCSS 的文档)
-* [Customizing PostCSS Config](https://nextjs.org/docs/advanced-features/customizing-postcss-config) (Next.js 的文档)
+- [Install Tailwind CSS with Next.js](https://tailwindcss.com/docs/guides/nextjs) (TailwindCSS 的文档)
+- [Customizing PostCSS Config](https://nextjs.org/docs/advanced-features/customizing-postcss-config) (Next.js 的文档)
 
 当然你也可以完全不使用 TailwindCSS，Next.js 支持 CSS Modules、Sass/Less、CSS in JS 等多种方式，可根据自己的喜好进行选择。不过强烈建议你尝试一下 TailwindCSS，真的很好用。
 
@@ -59,7 +61,7 @@ export default function Home({ posts }) {
 export async function getStaticProps() {
   const posts = getPostList();
   return {
-    props: { posts }
+    props: { posts },
   };
 }
 ```
@@ -84,7 +86,7 @@ export default function PostItem({ post }) {
 export async function getStaticProps({ params }) {
   const post = await getPostBySlug(params.slug);
   return {
-    props: { post }
+    props: { post },
   };
 }
 
@@ -110,6 +112,7 @@ export async function getStaticPaths() {
 title: 文章标题
 date: 2021-01-31 12:01:54
 ---
+
 这里是 Markdown 格式的文章内容
 ```
 
@@ -117,8 +120,8 @@ date: 2021-01-31 12:01:54
 
 这里用到两个 npm 包来解析 Markdown 文件：
 
-* 使用 [gray-matter](https://www.npmjs.com/package/gray-matter) 把 Front Matter 和文章内容分离，并将 Front Matter 解析为 JS 对象；
-* 使用 [remark](https://www.npmjs.com/package/remark) 将上一步分离出的文章内容解析为 HTML 格式，使用 remark 时需要用到多个相关插件，稍微麻烦了一点；
+- 使用 [gray-matter](https://www.npmjs.com/package/gray-matter) 把 Front Matter 和文章内容分离，并将 Front Matter 解析为 JS 对象；
+- 使用 [remark](https://www.npmjs.com/package/remark) 将上一步分离出的文章内容解析为 HTML 格式，使用 remark 时需要用到多个相关插件，稍微麻烦了一点；
 
 使用 remark 时，可以使用 [remark-prism](https://www.npmjs.com/package/remark-prism) 实现代码高亮，记得在文章页导入一个 prism 的主题 CSS 文件，不然文章中插入的代码没有高亮。
 
@@ -140,14 +143,13 @@ Next.js 是由 [Vercel ](https://vercel.com/dashboard) 开发的，所以把项�
 
 ## 参考链接
 
-* [本博客源码仓库](https://github.com/pengtikui/pengtikui.cn)
-* [Install Tailwind CSS with Next.js](https://tailwindcss.com/docs/guides/nextjs)
-* [Customizing PostCSS Config](https://nextjs.org/docs/advanced-features/customizing-postcss-config)
-* [Data Fetching](https://nextjs.org/docs/basic-features/data-fetching)
-* [Next.js 官方文档](https://nextjs.org/docs)
-* [TailwindCSS 官方文档](https://tailwindcss.com/docs)
-* [gray-matter](https://www.npmjs.com/package/gray-matter)
-* [remark](https://remark.js.org)
-* [Prism](https://prismjs.com)
-* [Next.js on Vercel](https://vercel.com/docs/next.js/overview)
-
+- [本博客源码仓库](https://github.com/pengtikui/pengtikui.cn)
+- [Install Tailwind CSS with Next.js](https://tailwindcss.com/docs/guides/nextjs)
+- [Customizing PostCSS Config](https://nextjs.org/docs/advanced-features/customizing-postcss-config)
+- [Data Fetching](https://nextjs.org/docs/basic-features/data-fetching)
+- [Next.js 官方文档](https://nextjs.org/docs)
+- [TailwindCSS 官方文档](https://tailwindcss.com/docs)
+- [gray-matter](https://www.npmjs.com/package/gray-matter)
+- [remark](https://remark.js.org)
+- [Prism](https://prismjs.com)
+- [Next.js on Vercel](https://vercel.com/docs/next.js/overview)
