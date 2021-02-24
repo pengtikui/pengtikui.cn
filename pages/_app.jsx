@@ -38,7 +38,7 @@ export default function MyApp({ Component, pageProps }) {
             target="_blank"
             rel="noreferrer noopener"
           >
-            鲁ICP备15010597号
+            鲁ICP备15010597号-1
           </a>
         </p>
         <a
