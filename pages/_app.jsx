@@ -1,6 +1,7 @@
 import 'tailwindcss/tailwind.css';
 import '../styles/globals.css';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const navList = [
   {
@@ -49,10 +50,12 @@ export default function MyApp({ Component, pageProps }) {
           rel="noreferrer noopener"
           title="Powered by Vercel"
         >
-          <img
+          <Image
             src="/powered-by-vercel.svg"
             alt="Powered by Vercel"
             className="h-8"
+            width={167}
+            height={32}
           />
         </a>
       </footer>
