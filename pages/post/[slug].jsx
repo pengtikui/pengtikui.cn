@@ -1,11 +1,9 @@
 import Head from 'next/head';
 import 'prism-themes/themes/prism-vsc-dark-plus.css';
-import hydrate from 'next-mdx-remote/hydrate';
+import { MDXRemote } from 'next-mdx-remote';
 import { getPostBySlug, getPostSlugList } from '../../lib/api';
 
 export default function PostItem({ post }) {
-  const content = hydrate(post.content, { components: {} });
-
   return (
     <div className="mt-6 max-w-3xl mx-auto">
       <Head>
@@ -20,7 +18,9 @@ export default function PostItem({ post }) {
           {post.date}
         </span>
       </header>
-      <article className="prose dark:prose-light max-w-none">{content}</article>
+      <article className="prose dark:prose-light max-w-none">
+        <MDXRemote {...post.content} />
+      </article>
     </div>
   );
 }
