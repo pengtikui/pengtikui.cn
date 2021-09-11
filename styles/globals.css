@@ -1,6 +1,6 @@
 html,
 body {
-  @apply dark:bg-gray-900
+  @apply dark:bg-gray-900;
 }
 
 #__next {
@@ -17,25 +17,25 @@ body {
 
 .nav-item {
   @apply transition-shadow duration-150;
-  box-shadow: inset 0 -.15em 0 theme('colors.yellow.400');
+  box-shadow: inset 0 -0.15em 0 theme('colors.yellow.400');
 }
 .nav-item:hover {
-  box-shadow: inset 0 -.85em 0 theme('colors.yellow.400');
+  box-shadow: inset 0 -0.85em 0 theme('colors.yellow.400');
 }
 
 .post-link {
   @apply transition-shadow duration-150;
-  box-shadow: inset 0 -.1em 0 theme('colors.yellow.400');
+  box-shadow: inset 0 -0.1em 0 theme('colors.yellow.400');
 }
 .post-link:hover {
-  box-shadow: inset 0 -.8em 0 theme('colors.yellow.400');
+  box-shadow: inset 0 -0.8em 0 theme('colors.yellow.400');
 }
 
 .author-header > div:first-child {
   @apply rounded-full shadow;
 }
 
-pre[class*="language-"],
-code[class*="language-"] {
+pre[class*='language-'],
+code[class*='language-'] {
   font-size: 14px !important;
 }
