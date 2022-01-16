@@ -12,16 +12,9 @@ class MyDocument extends Document {
         <Head>
           <script
             async
-            src="https://www.googletagmanager.com/gtag/js?id=UA-74390371-1"
-          />
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'UA-74390371-1');`,
-            }}
+            defer
+            data-website-id="a4bc7e1a-0559-4a0b-bf29-5de3f4e87c71"
+            src="https://umami-five-tau.vercel.app/umami.js"
           />
         </Head>
         <body>
