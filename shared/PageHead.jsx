@@ -1,9 +1,9 @@
 import Head from 'next/head';
 
-export default function PageHead() {
+export default function PageHead({ title }) {
   return (
     <Head>
-      <title>Paranoid_K</title>
+      <title>{title}</title>
       <meta name="author" content="Paranoid_K" />
       <meta
         name="description"

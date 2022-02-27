@@ -1,66 +1,34 @@
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 module.exports = {
   content: ['./pages/**/*.jsx', './shared/**/*.jsx', './styles/**/*.css'],
-  darkMode: 'media',
+  darkMode: false,
   theme: {
     extend: {
-      typography: (theme) => ({
-        light: {
+      fontFamily: {
+        sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+      },
+      typography: () => ({
+        DEFAULT: {
           css: [
             {
-              color: theme('colors.gray.300'),
-              '[class~="lead"]': {
-                color: theme('colors.gray.200'),
+              'code::before': {
+                display: 'none',
               },
-              a: {
-                color: theme('colors.white'),
+              'code::after': {
+                display: 'none',
               },
-              strong: {
-                color: theme('colors.white'),
+              'blockquote p:first-of-type::before': {
+                display: 'none',
               },
-              'ol > li::before': {
-                color: theme('colors.gray.300'),
+              'blockquote p:last-of-type::after': {
+                display: 'none',
               },
-              'ul > li::before': {
-                backgroundColor: theme('colors.gray.600'),
+              "pre[class*='language-']": {
+                fontSize: '14px !important',
               },
-              hr: {
-                borderColor: theme('colors.gray.200'),
-              },
-              blockquote: {
-                color: theme('colors.gray.200'),
-                borderLeftColor: theme('colors.gray.600'),
-              },
-              h1: {
-                color: theme('colors.white'),
-              },
-              h2: {
-                color: theme('colors.white'),
-              },
-              h3: {
-                color: theme('colors.white'),
-              },
-              h4: {
-                color: theme('colors.white'),
-              },
-              'figure figcaption': {
-                color: theme('colors.gray.300'),
-              },
-              code: {
-                color: theme('colors.white'),
-              },
-              'a code': {
-                color: theme('colors.white'),
-              },
-              pre: {
-                color: theme('colors.gray.200'),
-                backgroundColor: theme('colors.gray.800'),
-              },
-              thead: {
-                color: theme('colors.white'),
-                borderBottomColor: theme('colors.gray.400'),
-              },
-              'tbody tr': {
-                borderBottomColor: theme('colors.gray.600'),
+              "code[class*='language-']": {
+                fontSize: '14px !important',
               },
             },
           ],
