@@ -10,12 +10,7 @@ class MyDocument extends Document {
     return (
       <Html lang="zh-CN">
         <Head>
-          <script
-            async
-            defer
-            data-website-id="a4bc7e1a-0559-4a0b-bf29-5de3f4e87c71"
-            src="https://umami-five-tau.vercel.app/umami.js"
-          />
+          <script async src="https://cdn.splitbee.io/sb.js" />
           <link rel="stylesheet" href="https://rsms.me/inter/inter.css"></link>
         </Head>
         <body>
