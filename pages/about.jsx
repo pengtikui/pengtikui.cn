@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { AtSign, GitHub } from 'react-feather';
 import PageHead from '../shared/PageHead';
 import Banner from '../shared/Banner';
 
@@ -14,15 +15,27 @@ export default function About() {
           <Image
             className="rounded-full"
             src="/avatar.jpeg"
-            width={120}
-            height={120}
-            alt=""
+            width={100}
+            height={100}
+            alt="Avatar"
           />
         </div>
-        <p>一个前端开发者</p>
-        <p>
-          你可以通过<a href="mailto:pengtikui@gmail.com">邮件</a>联系我
-        </p>
+        <div className="flex items-center justify-center space-x-4">
+          <a
+            className="w-5 h-5"
+            title="Email"
+            href="mailto:pengtikui@gmail.com"
+          >
+            <AtSign size="100%" />
+          </a>
+          <a
+            className="w-5 h-5"
+            title="GitHub"
+            href="https://github.com/pengtikui"
+          >
+            <GitHub size="100%" />
+          </a>
+        </div>
       </div>
     </>
   );

@@ -2,13 +2,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 export default function Header() {
-  const navList = [
-    { title: '首页', href: '/' },
-    { title: '关于', href: '/about' },
-  ];
-
   return (
-    <header className="px-4 py-4 sticky top-0 z-10 bg-white backdrop-blur backdrop-filter bg-opacity-90">
+    <header className="px-4 py-4 sticky top-0 z-10  backdrop-blur backdrop-filter bg-opacity-90">
       <div className="max-w-2xl mx-auto flex items-center justify-between">
         <Link href="/">
           <a className="flex items-center">
