@@ -11,7 +11,6 @@ class MyDocument extends Document {
       <Html lang="zh-CN">
         <Head>
           <script async src="https://cdn.splitbee.io/sb.js" />
-          <link rel="stylesheet" href="https://rsms.me/inter/inter.css"></link>
         </Head>
         <body>
           <Main />

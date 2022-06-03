@@ -1,13 +1,8 @@
-const defaultTheme = require('tailwindcss/defaultTheme');
-
 module.exports = {
   content: ['./pages/**/*.jsx', './shared/**/*.jsx', './styles/**/*.css'],
   darkMode: false,
   theme: {
     extend: {
-      fontFamily: {
-        sans: ['Inter var', ...defaultTheme.fontFamily.sans],
-      },
       typography: () => ({
         DEFAULT: {
           css: [
