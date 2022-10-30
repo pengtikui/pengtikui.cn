@@ -15,10 +15,8 @@ export default function Home({ posts }) {
           <article key={post.slug} className="mb-12 px-4">
             <p className="text-sm text-gray-400 mb-2">{post.date}</p>
             <h2 className="text-xl font-medium">
-              <Link href={`/post/${post.slug}`}>
-                <a className="hover:underline underline-offset-4">
-                  {post.title}
-                </a>
+              <Link className="hover:underline underline-offset-4" href={`/post/${post.slug}`}>
+                {post.title}
               </Link>
             </h2>
             <p className="mt-2 text-sm text-gray-600">{post.description}</p>
