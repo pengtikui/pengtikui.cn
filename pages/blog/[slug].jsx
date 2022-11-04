@@ -9,7 +9,9 @@ export default function BlogItem({ blog }) {
   return (
     <div className="mt-6 max-w-2xl mx-auto px-4">
       <Head>
-        <title>{blog.title} - Paranoid_K</title>
+        <title>
+          {blog.title} - {`Paranoid_K's Blog`}
+        </title>
         <meta name="author" content="Paranoid_K" />
         <meta name="description" content={blog.description} />
         <meta name="keywords" content={blog.tags} />

@@ -1,15 +1,16 @@
 import Link from 'next/link';
+import Head from 'next/head';
 import PageHead from '../../shared/PageHead';
 import Banner from '../../shared/Banner';
-import { getBlogList } from '../../lib/api';
+import { getWeeklyList } from '../../lib/api';
 import ContentItem from '../../shared/ContentItem';
 
-export default function BlogIndex({ list }) {
+export default function WeeklyIndex({ list }) {
   return (
     <>
-      <PageHead title={`Paranoid_K's Blog`} />
+      <PageHead title={`Paranoid_K's Weekly`} />
       <Banner>
-        <h1>博客</h1>
+        <h1>周刊</h1>
       </Banner>
       <div className="max-w-2xl mx-auto mt-12">
         {list?.map((content) => (
@@ -21,7 +22,7 @@ export default function BlogIndex({ list }) {
 }
 
 export async function getStaticProps() {
-  const list = getBlogList();
+  const list = getWeeklyList();
   return {
     props: { list: list.map(({ tags, ...rest }) => rest) },
   };
