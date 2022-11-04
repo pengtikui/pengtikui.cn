@@ -7,13 +7,20 @@ const needRedirectPostList = [
   'koa2-get-started',
 ];
 
+/** @type {import('next').NextConfig} */
 module.exports = {
   async redirects() {
-    return needRedirectPostList.map((slug) => ({
-      source: `/${slug}`,
-      destination: `/post/${slug}`,
-      permanent: true,
-    }));
+    return [
+      ...needRedirectPostList.map((slug) => ({
+        source: `/${slug}`,
+        destination: `/post/${slug}`,
+        permanent: true,
+      })),
+      {
+        source: '/post/:path*',
+        destination: '/blog/:path*',
+        permanent: true,
+      },
+    ];
   },
-  swcMinify: true,
 };

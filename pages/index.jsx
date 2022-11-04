@@ -1,9 +1,10 @@
 import Link from 'next/link';
 import PageHead from '../shared/PageHead';
 import Banner from '../shared/Banner';
-import { getPostList } from '../lib/api';
+import { getAllList } from '../lib/api';
+import ContentItem from '../shared/ContentItem';
 
-export default function Home({ posts }) {
+export default function Home({ list }) {
   return (
     <>
       <PageHead title="Paranoid_K" />
@@ -11,16 +12,8 @@ export default function Home({ posts }) {
         <h1>#stayparanoid</h1>
       </Banner>
       <div className="max-w-2xl mx-auto mt-12">
-        {posts?.map((post) => (
-          <article key={post.slug} className="mb-12 px-4">
-            <p className="text-sm text-gray-400 mb-2">{post.date}</p>
-            <h2 className="text-xl font-medium">
-              <Link className="hover:underline underline-offset-4" href={`/post/${post.slug}`}>
-                {post.title}
-              </Link>
-            </h2>
-            <p className="mt-2 text-sm text-gray-600">{post.description}</p>
-          </article>
+        {list?.map((content) => (
+          <ContentItem key={content.slug} content={content} />
         ))}
       </div>
     </>
@@ -28,8 +21,8 @@ export default function Home({ posts }) {
 }
 
 export async function getStaticProps() {
-  const posts = getPostList();
+  const list = getAllList();
   return {
-    props: { posts },
+    props: { list: list.map(({ tags, ...rest }) => rest) },
   };
 }
