@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Image from 'next/image';
 import { MDXRemote } from 'next-mdx-remote';
 import Banner from '../../shared/Banner';
 import { getBlogBySlug, getBlogSlugList } from '../../lib/api';
@@ -9,9 +10,7 @@ export default function BlogItem({ blog }) {
   return (
     <div className="mt-6 max-w-2xl mx-auto px-4">
       <Head>
-        <title>
-          {blog.title} - {`Paranoid_K's Blog`}
-        </title>
+        <title>{`${blog.title} - Paranoid_K's Blog`}</title>
         <meta name="author" content="Paranoid_K" />
         <meta name="description" content={blog.description} />
         <meta name="keywords" content={blog.tags} />
@@ -21,7 +20,7 @@ export default function BlogItem({ blog }) {
         <span className="mt-2 text-sm text-gray-400">{blog.date}</span>
       </Banner>
       <article className="py-8 prose max-w-none">
-        <MDXRemote {...blog.content} />
+        <MDXRemote {...blog.content} components={{ img: (props) => <Image {...props} /> }} />
       </article>
     </div>
   );

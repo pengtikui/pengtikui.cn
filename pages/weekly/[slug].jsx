@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Image from 'next/image';
 import { MDXRemote } from 'next-mdx-remote';
 import Banner from '../../shared/Banner';
 import { getWeeklyBySlug, getWeeklySlugList } from '../../lib/api';
@@ -9,9 +10,7 @@ export default function WeeklyItem({ weekly }) {
   return (
     <div className="mt-6 max-w-2xl mx-auto px-4">
       <Head>
-        <title>
-          {weekly.title} - {`Paranoid_K's Weekly`}
-        </title>
+        <title>{`${weekly.title} - Paranoid_K's Weekly`}</title>
         <meta name="author" content="Paranoid_K" />
         <meta name="description" content={weekly.description} />
       </Head>
@@ -20,7 +19,7 @@ export default function WeeklyItem({ weekly }) {
         <span className="mt-2 text-sm text-gray-400">{weekly.date}</span>
       </Banner>
       <article className="py-8 prose max-w-none">
-        <MDXRemote {...weekly.content} />
+        <MDXRemote {...weekly.content} components={{ img: (props) => <Image {...props} /> }} />
       </article>
     </div>
   );
