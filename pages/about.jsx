@@ -8,7 +8,7 @@ export default function About() {
     <>
       <PageHead title="关于 - Paranoid_K" />
       <Banner>
-        <h1 className="text-3xl font-medium">关于</h1>
+        <h1 className="text-2xl font-medium">关于</h1>
       </Banner>
       <div className="prose text-center max-w-2xl mx-auto py-8">
         <div className="flex justify-center mb-8">
@@ -21,18 +21,10 @@ export default function About() {
           />
         </div>
         <div className="flex items-center justify-center space-x-4">
-          <a
-            className="w-5 h-5"
-            title="Email"
-            href="mailto:pengtikui@gmail.com"
-          >
+          <a className="w-5 h-5" title="Email" href="mailto:pengtikui@gmail.com">
             <AtSign size="100%" />
           </a>
-          <a
-            className="w-5 h-5"
-            title="GitHub"
-            href="https://github.com/pengtikui"
-          >
+          <a className="w-5 h-5" title="GitHub" href="https://github.com/pengtikui">
             <GitHub size="100%" />
           </a>
         </div>

@@ -8,7 +8,7 @@ import 'prism-themes/themes/prism-vsc-dark-plus.css';
 
 export default function BlogItem({ blog }) {
   return (
-    <div className="mt-6 max-w-2xl mx-auto px-4">
+    <div className="mt-6 max-w-2xl mx-auto">
       <Head>
         <title>{`${blog.title} - Paranoid_K's Blog`}</title>
         <meta name="author" content="Paranoid_K" />
@@ -19,7 +19,7 @@ export default function BlogItem({ blog }) {
         <h1 className="text-3xl font-medium dark:text-white">{blog.title}</h1>
         <span className="mt-2 text-sm text-gray-400">{blog.date}</span>
       </Banner>
-      <article className="py-8 prose max-w-none">
+      <article className="px-4 py-8 prose max-w-none">
         <MDXRemote {...blog.content} components={{ img: (props) => <Image {...props} /> }} />
       </article>
     </div>

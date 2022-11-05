@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.4",
+    "@heroicons/react": "^2.0.13",
     "dayjs": "^1.10.4",
     "eslint-config-prettier": "^8.4.0",
     "gray-matter": "^4.0.2",

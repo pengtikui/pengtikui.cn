@@ -10,7 +10,7 @@ export default function WeeklyIndex({ list }) {
     <>
       <PageHead title={`Paranoid_K's Weekly`} />
       <Banner>
-        <h1>周刊</h1>
+        <h1 className="text-2xl font-medium">周刊</h1>
       </Banner>
       <div className="max-w-2xl mx-auto mt-12">
         {list?.map((content) => (

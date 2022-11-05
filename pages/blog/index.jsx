@@ -9,7 +9,7 @@ export default function BlogIndex({ list }) {
     <>
       <PageHead title={`Paranoid_K's Blog`} />
       <Banner>
-        <h1>博客</h1>
+        <h1 className="text-2xl font-medium">博客</h1>
       </Banner>
       <div className="max-w-2xl mx-auto mt-12">
         {list?.map((content) => (
