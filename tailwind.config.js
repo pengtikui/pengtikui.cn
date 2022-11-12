@@ -26,6 +26,9 @@ module.exports = {
               "code[class*='language-']": {
                 fontSize: '14px !important',
               },
+              'p:first-child > img': {
+                marginTop: 0,
+              },
             },
           ],
         },
