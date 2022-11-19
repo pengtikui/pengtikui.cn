@@ -28,6 +28,10 @@ module.exports = {
               },
               'p:first-child > img': {
                 marginTop: 0,
+                boxShadow: '0 10px 14px rgba(0, 0, 0, 0.2)',
+              },
+              'p, li': {
+                textAlign: 'justify',
               },
             },
           ],
