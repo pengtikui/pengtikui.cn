@@ -1,7 +1,7 @@
 ---
 title: 第6期：Supabase - Firebase 开源替代方案
 date: 2022-12-10
-description:
+description: Supabase 是一个优秀的 Firebase 开源替代方案。
 ---
 
 ![](/static/weekly/issue-6-cover.png)
