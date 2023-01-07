@@ -1,7 +1,7 @@
 ---
 title: 第10期：持续重构
 date: 2023-01-07
-description:
+description: 其实人也一样，需要持续重构自己。
 ---
 
 ![](/static/weekly/issue-10-cover.jpg)
