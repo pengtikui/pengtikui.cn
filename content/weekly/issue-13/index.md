@@ -1,7 +1,7 @@
 ---
 title: 第13期：强类型的多态组件
 date: 2023-02-11
-description:
+description: 学习一下怎么写一个强类型的多态组件，玩一下类型体操。
 ---
 
 ![](/static/weekly/issue-13-cover.jpg)
