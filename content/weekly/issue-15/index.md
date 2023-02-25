@@ -12,7 +12,7 @@ description: Headless 这个概念有点流行，一切都在 Headless 化。
 
 - **Headless Browser**，也就是无头浏览器，最常见的有[Puppeteer](https://github.com/puppeteer/puppeteer)、[Playwright](https://playwright.dev)。它们都是一个没有 UI 界面的浏览器，可以通过特定的协议或 API 来操作页面（如打开 URL、点击页面上的按钮等），一般用于网页截图或生成 PDF 文件、爬取 SPA 网页、UI 自动化测试等。
 
-- **Headless CMS**，是指仅有管理后台的内容管理系统，常见的有 [Strapi](https://strapi.io)、[Directus](https://directus.io) 等。传统的 CMS 如 Wordpress 等是包含管理后台、前台及一些默认主题的，而 Headless CMS 仅包含管理后台，对于前台页面、内容模型没有任何定义，这样用户可以灵活的定制自己所需的内容模型，并且前台页面无论是样式还是技术栈也都可以更灵活。
+- **Headless CMS**，是指仅有管理后台的内容管理系统，常见的有 [Strapi](https://strapi.io)、[Directus](https://directus.io) 等。传统的 CMS 如 Wordpress 等是包含管理后台、前台及一些默认主题的，而 Headless CMS 仅包含管理后台，对于前台页面、内容模型没有任何定义，这样用户可以灵活地定制自己所需的内容模型，并且前台页面无论是样式还是技术栈也都可以更灵活。
 
 - **Headless Commerce**，是指无头电商系统，可以把它理解为特定领域的 Headless CMS，常见的有 [Commerce.js](https://commercejs.com)，Shopify 也有相关解决方案。这种电商系统仅提供管理后台，包含商品管理、订单管理、支付服务等基础功能，而面向用户的界面则可以灵活实现，无论是 Web 页面还是 App 都可以，样式也可以更个性化。
 
