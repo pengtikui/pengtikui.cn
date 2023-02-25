@@ -1,7 +1,7 @@
 ---
 title: 第15期：一切皆可 Headless
 date: 2023-02-25
-description: Headless 这个概念有点流行，一切都在 Headless 化
+description: Headless 这个概念有点流行，一切都在 Headless 化。
 ---
 
 ![](/static/weekly/issue-15-cover.jpg)
