@@ -6,7 +6,7 @@ description: Headless 这个概念有点流行，一切都在 Headless 化。
 
 ![](/static/weekly/issue-15-cover.jpg)
 
-最近几年，Headless 这个概念有点流行，和多东西都在被 Headless 化，Headless 本意是“无头”，是指一个应用程序在后台运行，没有 UI 界面，但现在这个概念被运用到了更多的领域，如 Headless CMS、Headless Commerce、Headless 组件库等。
+最近几年，Headless 这个概念有点流行，很多东西都在被 Headless 化，Headless 本意是“无头”，是指一个应用程序在后台运行，没有 UI 界面，但现在这个概念被运用到了更多的领域，如 Headless CMS、Headless Commerce、Headless 组件库等。
 
 这里就简单梳理一下那些 Headless 化的东西：
 
