@@ -18,7 +18,7 @@ description: 少抱怨，多思考，学会拥抱变化。
 
 #### [Announcing TypeScript 5.0](https://devblogs.microsoft.com/typescript/announcing-typescript-5-0/)
 
-TypeScript 5.0 版本正式发布，实现了新的装饰器标准、更好地支持 Node 和打构建工具中的 ESM 项目的功能、简化了配置，并进行了许多其他改进。
+TypeScript 5.0 版本正式发布，实现了新的装饰器标准、更好地支持 Node 和构建工具中的 ESM 项目的功能、简化了配置，并进行了许多其他改进。
 
 #### [Ant Design MetaGuide 设计系统元规范](https://mp.weixin.qq.com/s/nPFrPW7XL2ZKXqGBCmsieg)
 
