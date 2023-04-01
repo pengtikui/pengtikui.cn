@@ -46,7 +46,7 @@ Laf 是个开源的云开发平台，提供云函数、云数据库和对象存�
 
 #### [Meilisearch](https://github.com/meilisearch/meilisearch)
 
-Meilisearch 是个轻量级的搜索引擎，安装、部署和维护都比较简单，对于一些轻量的项目，可以用于它来替代较重的 Elasticsearch。
+Meilisearch 是个轻量级的搜索引擎，安装、部署和维护都比较简单，对于一些轻量的项目，可以用它来替代较重的 Elasticsearch。
 
 ## 其他
 
