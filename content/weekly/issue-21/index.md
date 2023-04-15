@@ -32,7 +32,7 @@ Supbase 最近带来了一系列更新，包含多个模块：
 - [Supabase Logs](https://supabase.com/blog/supabase-logs-self-hosted)：开源了日志服务，可以自部署；
 - [Supabase Edge Runtime](https://supabase.com/blog/edge-runtime-self-hosted-deno-functions)：Supabase 的函数功能只能使用其云服务，自部署不支持该功能，现在开源了 Edge Runtime，可以自部署函数服务了；
 - [Supavisor](https://github.com/supabase/supavisor)：一个新开源的可伸缩、云原生的 Postgres 连接池，支持多租户能力；
-- [Supabase Storage v3]：Storage v3 最大的更新是支持了可恢复上传，在上传中断后可以恢复上传，不需要从头再来了，因此也支持了最大 50G 的文件上传；
+- [Supabase Storage v3](https://supabase.com/blog/storage-v3-resumable-uploads)：Storage v3 最大的更新是支持了可恢复上传，在上传中断后可以恢复上传，不需要从头再来了，因此也支持了最大 50G 的文件上传；
 - [Supabase Auth](https://supabase.com/blog/supabase-auth-sso-pkce)：Auth 的 SSO 功能支持了 SAML 2.0，同时支持了服务端项目和 iOS 原生应用。
 
 ## 开源
