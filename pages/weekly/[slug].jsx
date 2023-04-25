@@ -15,7 +15,7 @@ export default function WeeklyItem({ weekly }) {
         <meta name="description" content={weekly.description} />
       </Head>
       <Banner>
-        <h1 className="text-3xl font-medium dark:text-white">{weekly.title}</h1>
+        <h1 className="text-3xl font-medium">{weekly.title}</h1>
         <span className="mt-2 text-sm text-gray-400">{weekly.date}</span>
       </Banner>
       <article className="px-4 py-8 prose max-w-none">
