@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import { Lato } from 'next/font/google';
 import List from '../../components/List';
 import { getBlogList } from '../../lib/api';
@@ -6,6 +7,10 @@ const font = Lato({
   weight: '700',
   subsets: ['latin'],
 });
+
+export const metadata: Metadata = {
+  title: `Paranoid_K's Blog`,
+};
 
 export default async function Page() {
   const blog = getBlogList();
