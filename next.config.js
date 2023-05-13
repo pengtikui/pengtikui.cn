@@ -26,4 +26,7 @@ module.exports = {
   images: {
     formats: ['image/avif', 'image/webp'],
   },
+  experimental: {
+    appDir: true,
+  },
 };
