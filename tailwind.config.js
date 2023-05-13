@@ -1,6 +1,8 @@
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./pages/**/*.jsx', './shared/**/*.jsx', './styles/**/*.css'],
+  content: ['./app/**/*.tsx', './components/**/*.tsx'],
   darkMode: 'media',
   theme: {
     extend: {
@@ -37,6 +39,9 @@ module.exports = {
           ],
         },
       }),
+      fontFamily: {
+        sans: ['var(--font-inter)', ...defaultTheme.fontFamily.sans],
+      },
     },
   },
   variants: {
