@@ -1,8 +1,23 @@
-import { MDXRemote } from 'next-mdx-remote/rsc';
-import { getWeeklyBySlug } from '../../../lib/api';
+import { notFound } from 'next/navigation';
+import { allWeeklies } from 'contentlayer/generated';
+import MDX from '@/components/MDX';
+
+export const generateStaticParams = async () => allWeeklies.map((item) => ({ slug: item.slug }));
+
+export const generateMetadata = async ({ params }) => {
+  const weekly = allWeeklies.find((item) => item.slug === params.slug);
+  return {
+    title: `${weekly.title} - Paranoid_K's Weekly`,
+    description: weekly.description,
+  };
+};
 
 export default async function Page({ params }) {
-  const weekly = await getWeeklyBySlug(params.slug);
+  const weekly = allWeeklies.find((item) => item.slug === params.slug);
+
+  if (!weekly) {
+    return notFound();
+  }
 
   return (
     <>
@@ -11,8 +26,7 @@ export default async function Page({ params }) {
         <p className="mt-2 text-gray-500 text-sm">{weekly.date}</p>
       </div>
       <article className="px-2 prose">
-        {/* @ts-expect-error Async Server Component */}
-        <MDXRemote source={weekly.raw} />
+        <MDX code={weekly.body.code} />
       </article>
     </>
   );

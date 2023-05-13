@@ -33,5 +33,9 @@ yarn-error.log*
 # vercel
 .vercel
 
+# ide
 .idea
 .vscode
+
+# contentlayer
+.contentlayer

@@ -1,8 +1,24 @@
-import { MDXRemote } from 'next-mdx-remote/rsc';
-import { getBlogBySlug } from '../../../lib/api';
+import { notFound } from 'next/navigation';
+import { allBlogs } from 'contentlayer/generated';
+import MDX from '@/components/MDX';
+
+export const generateStaticParams = async () => allBlogs.map((item) => ({ slug: item.slug }));
+
+export const generateMetadata = async ({ params }) => {
+  const blog = allBlogs.find((item) => item.slug === params.slug);
+  return {
+    title: `${blog.title} - Paranoid_K's Blog`,
+    description: blog.description,
+    keywords: blog.tags.join(', '),
+  };
+};
 
 export default async function Page({ params }) {
-  const blog = await getBlogBySlug(params.slug);
+  const blog = allBlogs.find((item) => item.slug === params.slug);
+
+  if (!blog) {
+    return notFound();
+  }
 
   return (
     <>
@@ -11,8 +27,7 @@ export default async function Page({ params }) {
         <p className="mt-2 text-gray-500 text-sm">{blog.date}</p>
       </div>
       <article className="px-2 prose">
-        {/* @ts-expect-error Async Server Component */}
-        <MDXRemote source={blog.raw} />
+        <MDX code={blog.body.code} />
       </article>
     </>
   );

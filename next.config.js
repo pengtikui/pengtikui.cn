@@ -1,3 +1,5 @@
+const { withContentlayer } = require('next-contentlayer');
+
 const needRedirectPostList = [
   'react-code-style-guide',
   'css-in-react',
@@ -8,7 +10,7 @@ const needRedirectPostList = [
 ];
 
 /** @type {import('next').NextConfig} */
-module.exports = {
+const nextConfig = {
   async redirects() {
     return [
       ...needRedirectPostList.map((slug) => ({
@@ -30,3 +32,5 @@ module.exports = {
     appDir: true,
   },
 };
+
+module.exports = withContentlayer(nextConfig);

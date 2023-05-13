@@ -9,14 +9,19 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "dayjs": "^1.10.4",
+    "@contentlayer/source-files": "^0.3.2",
+    "contentlayer": "^0.3.2",
+    "date-fns": "^2.30.0",
     "eslint-config-prettier": "^8.4.0",
-    "gray-matter": "^4.0.2",
     "lucide-react": "^0.215.0",
     "next": "13.4.2",
-    "next-mdx-remote": "^4.4.1",
+    "next-contentlayer": "^0.3.2",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "rehype-img-size": "^1.0.1",
+    "rehype-pretty-code": "^0.9.5",
+    "remark-external-links": "^9.0.1",
+    "remark-gfm": "^3.0.1"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.7",

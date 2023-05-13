@@ -1,7 +1,8 @@
 import { Metadata } from 'next';
 import { Lato } from 'next/font/google';
-import List from '../../components/List';
-import { getWeeklyList } from '../../lib/api';
+import { compareDesc } from 'date-fns';
+import List from '@/components/List';
+import { allWeeklies } from 'contentlayer/generated';
 
 const font = Lato({
   weight: '700',
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
 };
 
 export default async function Page() {
-  const weekly = getWeeklyList();
+  const weeklyList = allWeeklies.sort((a, b) => compareDesc(new Date(a.date), new Date(b.date)));
 
   return (
     <>
@@ -28,7 +29,7 @@ export default async function Page() {
           行业资讯等。
         </p>
       </div>
-      <List data={weekly} />
+      <List data={weeklyList} />
     </>
   );
 }

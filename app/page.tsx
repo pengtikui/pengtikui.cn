@@ -1,9 +1,10 @@
 import Link from 'next/link';
 import { Anton } from 'next/font/google';
 import { ArrowUpRightIcon } from 'lucide-react';
-import Social from '../components/Social';
-import List from '../components/List';
-import { getShortBlogList, getShortWeeklyList } from '../lib/api';
+import { compareDesc } from 'date-fns';
+import Social from '@/components/Social';
+import List from '@/components/List';
+import { allBlogs, allWeeklies } from 'contentlayer/generated';
 
 const font = Anton({
   weight: '400',
@@ -11,7 +12,13 @@ const font = Anton({
 });
 
 export default async function Page() {
-  const [blog, weekly] = await Promise.all([getShortBlogList(), getShortWeeklyList()]);
+  const weeklyList = allWeeklies
+    .sort((a, b) => compareDesc(new Date(a.date), new Date(b.date)))
+    .slice(0, 5);
+
+  const blogList = allBlogs
+    .sort((a, b) => compareDesc(new Date(a.date), new Date(b.date)))
+    .slice(0, 5);
 
   return (
     <>
@@ -39,7 +46,7 @@ export default async function Page() {
             <ArrowUpRightIcon size={20} />
           </Link>
         </div>
-        <List data={weekly} className="mt-4" />
+        <List data={weeklyList} className="mt-4" />
       </div>
       <div className="mt-8">
         <div className="flex items-center justify-between px-3">
@@ -52,7 +59,7 @@ export default async function Page() {
             <ArrowUpRightIcon size={20} />
           </Link>
         </div>
-        <List data={blog} className="mt-4" />
+        <List data={blogList} className="mt-4" />
       </div>
     </>
   );

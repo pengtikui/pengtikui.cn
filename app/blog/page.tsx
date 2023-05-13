@@ -1,7 +1,8 @@
 import { Metadata } from 'next';
 import { Lato } from 'next/font/google';
-import List from '../../components/List';
-import { getBlogList } from '../../lib/api';
+import { compareDesc } from 'date-fns';
+import List from '@/components/List';
+import { allBlogs } from 'contentlayer/generated';
 
 const font = Lato({
   weight: '700',
@@ -13,7 +14,8 @@ export const metadata: Metadata = {
 };
 
 export default async function Page() {
-  const blog = getBlogList();
+  const blogList = allBlogs.sort((a, b) => compareDesc(new Date(a.date), new Date(b.date)));
+
   return (
     <>
       <div className="pt-10 pb-6 px-3">
@@ -23,7 +25,7 @@ export default async function Page() {
           博客 / Blog
         </h1>
       </div>
-      <List data={blog} />
+      <List data={blogList} />
     </>
   );
 }
