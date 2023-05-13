@@ -10,7 +10,8 @@ export default async function Page({ params }) {
         <h1 className="font-medium text-2xl">{weekly.title}</h1>
         <p className="mt-2 text-gray-500 text-sm">{weekly.date}</p>
       </div>
-      <article className="px-2 prose ">
+      <article className="px-2 prose">
+        {/* @ts-expect-error Async Server Component */}
         <MDXRemote source={weekly.raw} />
       </article>
     </>
