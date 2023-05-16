@@ -1,13 +1,13 @@
 import { MetadataRoute } from 'next';
-import { compareDesc, format } from 'date-fns';
+import { compareDesc } from 'date-fns';
 import { allBlogs, allWeeklies } from 'contentlayer/generated';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const allPost = [...allBlogs, ...allWeeklies]
-    .sort((a, b) => compareDesc(new Date(a.date), new Date(b.date)))
+    .sort((a, b) => compareDesc(new Date(a.lastModified), new Date(b.lastModified)))
     .map((item) => ({
       url: `https://pengtikui.cn${item.url}`,
-      lastModified: format(new Date(item.date), 'yyyy-MM-dd'),
+      lastModified: item.lastModified,
     }));
 
   return [
