@@ -4,10 +4,10 @@ import { allBlogs, allWeeklies } from 'contentlayer/generated';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const allPost = [...allBlogs, ...allWeeklies]
-    .sort((a, b) => compareDesc(new Date(a.lastModified), new Date(b.lastModified)))
+    .sort((a, b) => compareDesc(new Date(a.date), new Date(b.date)))
     .map((item) => ({
       url: `https://pengtikui.cn${item.url}`,
-      lastModified: item.lastModified,
+      lastModified: new Date(),
     }));
 
   return [

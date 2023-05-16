@@ -1,4 +1,3 @@
-import fs from 'fs';
 import { defineDocumentType, makeSource } from '@contentlayer/source-files';
 import rehypePrettyCode from 'rehype-pretty-code';
 import rehypeImgSize from 'rehype-img-size';
@@ -39,10 +38,6 @@ export const Blog = defineDocumentType(() => ({
       type: 'string',
       resolve: (blog) => blog._raw.sourceFileDir.replace('blog/', ''),
     },
-    lastModified: {
-      type: 'string',
-      resolve: (blog) => fs.statSync(`./content/${blog._raw.sourceFilePath}`).mtime,
-    },
   },
 }));
 
@@ -72,10 +67,6 @@ export const Weekly = defineDocumentType(() => ({
     slug: {
       type: 'string',
       resolve: (weekly) => weekly._raw.sourceFileDir.replace('weekly/', ''),
-    },
-    lastModified: {
-      type: 'string',
-      resolve: (blog) => fs.statSync(`./content/${blog._raw.sourceFilePath}`).mtime,
     },
   },
 }));
