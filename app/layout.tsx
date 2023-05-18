@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   description: 'Paranoid_K 的个人站点，关于前端、JavaScript 等',
   authors: [{ name: 'Paranoid_K', url: 'https://pengtikui.cn' }],
   other: {
-    'baidu-site-verification': 'eKQ4aI3G2Y',
+    'baidu-site-verification': 'codeva-vCZMO1BPzq',
   },
 };
 
