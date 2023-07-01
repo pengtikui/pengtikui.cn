@@ -4,7 +4,7 @@ date: 2023-06-24
 description: 简单吐槽一下 Prisma
 ---
 
-![](/static/weekly/issue-26-cover.jpg)
+![](/static/weekly/issue-28-cover.jpg)
 
 [Prisma](https://prisma.io) 是一个 Node.js 的 ORM 库，号称下一代 Node.js & TypeScript ORM。最近在开发一个新的项目，因为 [Sequelize](https://sequelize.org) 和 [TypeORM](https://typeorm.io) 在之前都有使用过，并且 Prisma 比较火、社区评价也比较高，这次就尝试使用了一下，但使用后发现它并没有像别人说的那么好，甚至可以说它算不上是一个合格的 ORM，这里就简单吐槽一下。
 
