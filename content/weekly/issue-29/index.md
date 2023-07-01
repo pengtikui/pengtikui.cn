@@ -1,7 +1,7 @@
 ---
 title: 第29期：设计师需要懂开发吗
 date: 2023-07-01
-description:
+description: 设计师还是懂点开发比较好
 ---
 
 ![](/static/weekly/issue-29-cover.jpg)
