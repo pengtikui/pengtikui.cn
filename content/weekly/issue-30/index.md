@@ -1,7 +1,7 @@
 ---
 title: 第30期：小而美与独立开发者
 date: 2023-07-08
-description:
+description: 推荐《小而美：持续盈利的经营法则》
 ---
 
 ![](/static/weekly/issue-30-cover.jpg)
