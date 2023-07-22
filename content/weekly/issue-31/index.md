@@ -1,7 +1,7 @@
 ---
 title: 第31期：中台与SaaS
 date: 2023-07-22
-description:
+description: 中台本质上就是 SaaS 吧
 ---
 
 ![](/static/weekly/issue-31-cover.jpg)
