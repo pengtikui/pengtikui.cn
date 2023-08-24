@@ -1,14 +1,15 @@
 import { FC } from 'react';
 import Link from 'next/link';
-import { IconBrandGithub, IconMail, IconBrandTwitter } from '@tabler/icons-react';
+import { IconBrandGithub, IconMail, IconBrandX } from '@tabler/icons-react';
 import WechatDialog from './WechatDialog';
 
 const Social: FC = () => {
   return (
     <div className="mt-6 flex items-center space-x-3">
       <Link
-        className="block p-1.5 rounded-full text-white bg-[#171715] transition-opacity hover:opacity-75"
+        className="block p-1.5 rounded-full text-white bg-[#171515] transition-opacity hover:opacity-75"
         href="https://github.com/pengtikui"
+        target="_blank"
         title="Github"
       >
         <IconBrandGithub size={20} />
@@ -21,11 +22,12 @@ const Social: FC = () => {
         <IconMail size={20} />
       </Link>
       <Link
-        className="block p-1.5 rounded-full text-white bg-[#1d9bf0] transition-colors hover:opacity-75"
-        href="https://twitter.com/pengtikui"
-        title="Twitter"
+        className="block p-1.5 rounded-full text-white bg-[#0f1419] transition-colors hover:opacity-75"
+        href="https://x.com/pengtikui"
+        target="_blank"
+        title="X (Twitter)"
       >
-        <IconBrandTwitter size={20} />
+        <IconBrandX size={20} />
       </Link>
       <WechatDialog />
     </div>
