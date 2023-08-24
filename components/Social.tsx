@@ -1,6 +1,7 @@
 import { FC } from 'react';
-import { IconBrandGithub, IconMail, IconBrandTwitter, IconBrandWechat } from '@tabler/icons-react';
 import Link from 'next/link';
+import { IconBrandGithub, IconMail, IconBrandTwitter } from '@tabler/icons-react';
+import WechatDialog from './WechatDialog';
 
 const Social: FC = () => {
   return (
@@ -26,13 +27,7 @@ const Social: FC = () => {
       >
         <IconBrandTwitter size={20} />
       </Link>
-      {/* <a
-        className="block p-1.5 rounded-full text-white bg-[#2aae67] transition-colors hover:opacity-75"
-        href="#"
-        title="微信"
-      >
-        <IconBrandWechat size={20} />
-      </a> */}
+      <WechatDialog />
     </div>
   );
 };
