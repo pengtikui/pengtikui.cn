@@ -17,7 +17,7 @@ const List: FC<ListProps> = ({ data, className }) => {
         >
           <Link href={item.url} className="flex items-center justify-between space-x-2">
             <span className="flex-grow text-gray-900 line-clamp-1">{item.title}</span>
-            <span className="flex-shrink-0 text-sm text-gray-400">
+            <span className="flex-shrink-0 text-sm text-gray-400 font-mono">
               {format(new Date(item.date), 'yyyy-MM-dd')}
             </span>
           </Link>
