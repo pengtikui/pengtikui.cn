@@ -1,41 +1,38 @@
 import { FC } from 'react';
-import { AtSignIcon, GithubIcon, TwitterIcon } from 'lucide-react';
+import { IconBrandGithub, IconMail, IconBrandTwitter, IconBrandWechat } from '@tabler/icons-react';
 import Link from 'next/link';
-
-const LIST = [
-  {
-    title: 'Github',
-    icon: GithubIcon,
-    href: 'https://github.com/pengtikui',
-    className: 'hover:bg-[#171715] hover:text-white',
-  },
-  {
-    title: '邮箱',
-    icon: AtSignIcon,
-    href: 'mailto:pengtikui@gmail.com',
-    className: 'hover:bg-[#e86125] hover:text-white',
-  },
-  {
-    title: 'Twitter',
-    icon: TwitterIcon,
-    href: 'https://twitter.com/pengtikui',
-    className: 'hover:bg-[#1d9bf0] hover:text-white',
-  },
-];
 
 const Social: FC = () => {
   return (
-    <div className="mt-6 flex items-center space-x-1">
-      {LIST.map((item) => (
-        <Link
-          key={item.title}
-          href={item.href}
-          title={item.title}
-          className={`block p-2 rounded-full text-gray-600 transition-colors ${item.className}`}
-        >
-          <item.icon size={20} />
-        </Link>
-      ))}
+    <div className="mt-6 flex items-center space-x-3">
+      <Link
+        className="block p-1.5 rounded-full text-white bg-[#171715] transition-opacity hover:opacity-75"
+        href="https://github.com/pengtikui"
+        title="Github"
+      >
+        <IconBrandGithub size={20} />
+      </Link>
+      <Link
+        className="block p-1.5 rounded-full text-white bg-[#e86125] transition-colors hover:opacity-75"
+        href="mailto:pengtikui@gmail.com"
+        title="邮箱"
+      >
+        <IconMail size={20} />
+      </Link>
+      <Link
+        className="block p-1.5 rounded-full text-white bg-[#1d9bf0] transition-colors hover:opacity-75"
+        href="https://twitter.com/pengtikui"
+        title="Twitter"
+      >
+        <IconBrandTwitter size={20} />
+      </Link>
+      {/* <a
+        className="block p-1.5 rounded-full text-white bg-[#2aae67] transition-colors hover:opacity-75"
+        href="#"
+        title="微信"
+      >
+        <IconBrandWechat size={20} />
+      </a> */}
     </div>
   );
 };

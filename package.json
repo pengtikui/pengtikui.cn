@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@contentlayer/source-files": "^0.3.2",
+    "@headlessui/react": "^1.7.17",
+    "@tabler/icons-react": "^2.32.0",
     "contentlayer": "^0.3.2",
     "date-fns": "^2.30.0",
     "eslint-config-prettier": "^8.4.0",
@@ -21,7 +23,8 @@
     "rehype-img-size": "^1.0.1",
     "rehype-pretty-code": "^0.9.5",
     "remark-external-links": "^9.0.1",
-    "remark-gfm": "^3.0.1"
+    "remark-gfm": "^3.0.1",
+    "shiki": "^0.14.3"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.7",
