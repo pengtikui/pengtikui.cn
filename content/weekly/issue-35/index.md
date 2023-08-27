@@ -1,7 +1,7 @@
 ---
 title: 第35期：Node.js ORM 盘点
 date: 2023-08-26
-description:
+description: Node.js 生态盘点之 ORM 篇
 ---
 
 ![](/static/weekly/issue-35-cover.jpg)
