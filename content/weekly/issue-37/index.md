@@ -16,7 +16,7 @@ Next.js 是 Vercel 开发的、基于 React 的全栈 Web 框架，应该也是�
 
 [Nuxt.js](https://nuxt.com/)
 
-Nuxt.js 不论是名字还是功能都与 Next.js 高度相似，不同的是它是基于 Vue.js 的，可以理解为 Vue 版的 Next.js。Next.js 有的功能 Nuxt.js 也基本都有，但相 Nuxt.js 的开发体验相对更好一点，官方提供了大量的第三方集成[模块](https://nuxt.com/modules)、官方的 [Devtools](https://devtools.nuxtjs.org/)、配套的[组件库](https://ui.nuxt.com/)等。
+Nuxt.js 不论是名字还是功能都与 Next.js 高度相似，不同的是它是基于 Vue.js 的，可以理解为 Vue 版的 Next.js。Next.js 有的功能 Nuxt.js 也基本都有，但 Nuxt.js 的开发体验相对更好一点，官方提供了大量的第三方集成[模块](https://nuxt.com/modules)、官方的 [Devtools](https://devtools.nuxtjs.org/)、配套的[组件库](https://ui.nuxt.com/)等。
 
 [Remix](https://remix.run/)
 
