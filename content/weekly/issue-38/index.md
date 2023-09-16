@@ -1,7 +1,7 @@
 ---
 title: 第38期：苹果还有创新吗？
 date: 2023-09-16
-description:
+description: 苹果还有创新吗？或许有吧。
 ---
 
 ![](/static/weekly/issue-38-cover.jpg)
