@@ -1,7 +1,7 @@
 ---
 title: 第39期：前端为什么那么复杂？
 date: 2023-09-23
-description:
+description: 前端那么复杂，你还学得动吗？
 ---
 
 ![](/static/weekly/issue-39-cover.jpg)
