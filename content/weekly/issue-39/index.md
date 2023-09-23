@@ -38,7 +38,7 @@ Safari 17 已经跟随 iOS 17 正式发布了，本文介绍了 Safari 17 中 We
 
 #### [Remix v2](https://remix.run/blog/remix-v2)
 
-Remix 是 React Router 团队开发的全栈 Web 框架，近期发布了 v2 版本。v2 相较于 v1 并没有太大的改动，因为大部分新特性以及在 v1 中通过 Future Flags 的方式提供，只是 v2 中移除了这些 Future Flags，不过 v2 提供了新的 `create-remix` CLI 工具，并且支持 Bun。另外值得注意的是 v2 版本仍然不支持 React 服务端组件，需要等到 v3 才能支持。
+Remix 是 React Router 团队开发的全栈 Web 框架，近期发布了 v2 版本。v2 相较于 v1 并没有太大的改动，因为大部分新特性已经在 v1 中通过 Future Flags 的方式提供，只是 v2 中移除了这些 Future Flags，不过 v2 提供了新的 `create-remix` CLI 工具，并且支持 Bun。另外值得注意的是 v2 版本仍然不支持 React 服务端组件，需要等到 v3 才能支持。
 
 #### [Next.js 13.5](https://nextjs.org/blog/next-13-5)
 
