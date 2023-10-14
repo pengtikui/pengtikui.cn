@@ -14,13 +14,13 @@ const Social: FC = () => {
       >
         <IconBrandGithub size={20} />
       </Link>
-      <Link
+      <a
         className="block p-1.5 rounded-full text-white bg-[#e86125] transition-colors hover:opacity-75"
         href="mailto:pengtikui@gmail.com"
         title="邮箱"
       >
         <IconMail size={20} />
-      </Link>
+      </a>
       <Link
         className="block p-1.5 rounded-full text-white bg-[#0f1419] transition-colors hover:opacity-75"
         href="https://x.com/pengtikui"
