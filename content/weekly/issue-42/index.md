@@ -14,7 +14,7 @@ Micro SaaS 顾名思义就是微型的 SaaS 服务，旨在解决小众市场的
 
 这里介绍几个不错的 Micro SaaS 服务：
 
-[Momentum](https://mmntm.build)：它为初创企业提供了一些列工具用于解决项目启动和用户增长时的问题，Momentum 的产品主要包含 Page、Feed 和 Wave 三部分，Page 用于快速创建 Landing Page，Feed 可以将信息快速分发到各个社交平台，Wave 用于网站的访问统计分析；
+[Momentum](https://mmntm.build)：它为初创公司提供了一系列工具用于解决项目启动和用户增长时的问题，Momentum 的产品主要包含 Page、Feed 和 Wave 三部分，Page 用于快速创建 Landing Page，Feed 可以将信息快速分发到各个社交平台，Wave 用于网站的访问统计分析；
 
 [Polymer](https://www.polymer.co)：它是一个招聘管理工具，可以轻松管理整个招聘流程，也可以快速创建一个漂亮的网站来展示开放的职位；
 
