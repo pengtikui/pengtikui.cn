@@ -1,0 +1,38 @@
+---
+import IconBrandGithub from '@/assets/icon-brand-github.svg?raw';
+import IconMail from '@/assets/icon-mail.svg?raw';
+import IconBrandX from '@/assets/icon-brand-x.svg?raw';
+import IconBrandWechat from '@/assets/icon-brand-wechat.svg?raw';
+---
+
+<div class="mt-6 flex items-center space-x-3">
+  <a
+    class="block p-1.5 rounded-full text-white bg-[#171515] transition-opacity hover:opacity-75"
+    href="https://github.com/pengtikui"
+    target="_blank"
+    title="Github"
+  >
+    <Fragment set:html={IconBrandGithub} />
+  </a>
+  <a
+    class="block p-1.5 rounded-full text-white bg-[#e86125] transition-colors hover:opacity-75"
+    href="mailto:pengtikui@gmail.com"
+    title="邮箱"
+  >
+    <Fragment set:html={IconMail} />
+  </a>
+  <a
+    class="block p-1.5 rounded-full text-white bg-[#0f1419] transition-colors hover:opacity-75"
+    href="https://x.com/pengtikui"
+    target="_blank"
+    title="X (Twitter)"
+  >
+    <Fragment set:html={IconBrandX} />
+  </a>
+  <a
+    class="block p-1.5 rounded-full text-white bg-[#2aae67] cursor-pointer transition-colors hover:opacity-75"
+    title="微信"
+  >
+    <Fragment set:html={IconBrandWechat} />
+  </a>
+</div>

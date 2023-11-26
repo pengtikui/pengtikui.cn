@@ -3,46 +3,40 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
   },
   "dependencies": {
-    "@contentlayer/source-files": "^0.3.4",
-    "@headlessui/react": "^1.7.17",
-    "@tabler/icons-react": "^2.32.0",
-    "contentlayer": "^0.3.4",
-    "date-fns": "^2.30.0",
-    "eslint-config-prettier": "^8.4.0",
-    "lucide-react": "^0.215.0",
-    "next": "13.5.4",
-    "next-contentlayer": "^0.3.4",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "rehype-img-size": "^1.0.1",
-    "rehype-pretty-code": "^0.10.1",
-    "remark-external-links": "^9.0.1",
-    "remark-gfm": "^3.0.1",
-    "shiki": "^0.14.5"
+    "@fontsource-variable/inter": "^5.0.15",
+    "@fontsource/anton": "^5.0.17",
+    "astro": "^3.6.0"
   },
   "devDependencies": {
-    "@tailwindcss/typography": "^0.5.7",
+    "@astrojs/tailwind": "^5.0.2",
+    "@tailwindcss/typography": "^0.5.10",
     "@types/node": "18.16.3",
-    "@types/react": "^18.2.6",
-    "@types/react-dom": "^18.2.4",
-    "autoprefixer": "^10.4.2",
-    "eslint": "^8.39.0",
-    "eslint-config-next": "^13.3.4",
-    "postcss": "^8.4.23",
-    "prettier": "^2.8.8",
-    "tailwindcss": "^3.3.2",
-    "typescript": "^5.0.4"
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.31",
+    "prettier": "^3.1.0",
+    "prettier-plugin-astro": "^0.12.2",
+    "tailwindcss": "^3.3.5",
+    "typescript": "^5.3.2"
   },
-  "eslintConfig": {
-    "extends": [
-      "next",
-      "prettier"
-    ]
+  "prettier": {
+    "plugins": [
+      "prettier-plugin-astro"
+    ],
+    "overrides": [
+      {
+        "files": "*.astro",
+        "options": {
+          "parser": "astro"
+        }
+      }
+    ],
+    "printWidth": 120,
+    "singleQuote": true
   }
 }

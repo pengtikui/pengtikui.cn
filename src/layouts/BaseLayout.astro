@@ -1,0 +1,22 @@
+---
+import '@fontsource-variable/inter';
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
+
+const { title } = Astro.props;
+---
+
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{title}</title>
+    <link rel="author" href="https://pengtikui.cn" />
+    <meta name="author" content="Paranoid_K" />
+  </head>
+  <body class="max-w-3xl mx-auto px-2">
+    <Header />
+    <slot />
+    <Footer />
+  </body>
+</html>

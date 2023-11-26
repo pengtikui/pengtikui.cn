@@ -2,7 +2,7 @@ const defaultTheme = require('tailwindcss/defaultTheme');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./app/**/*.tsx', './components/**/*.tsx'],
+  content: ['./src/**/*.astro'],
   darkMode: 'media',
   theme: {
     extend: {
@@ -40,7 +40,7 @@ module.exports = {
         },
       }),
       fontFamily: {
-        sans: ['var(--font-inter)', ...defaultTheme.fontFamily.sans],
+        sans: ['Inter Variable', ...defaultTheme.fontFamily.sans],
       },
     },
   },

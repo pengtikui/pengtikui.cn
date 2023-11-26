@@ -1,0 +1,28 @@
+---
+const MENUS = [
+  {
+    title: '首页',
+    href: '/',
+  },
+  {
+    title: '博客',
+    href: '/blog',
+  },
+  {
+    title: '周刊',
+    href: '/weekly',
+  },
+];
+---
+
+<nav>
+  <ul class="flex px-3 bg-white rounded-full shadow-lg shadow-gray-100 ring-1 ring-gray-100">
+    {
+      MENUS.map((item) => (
+        <li class="px-3 py-2 text-sm text-gray-700 transition-colors hover:text-black">
+          <a href={item.href}>{item.title}</a>
+        </li>
+      ))
+    }
+  </ul>
+</nav>

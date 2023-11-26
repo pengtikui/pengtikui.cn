@@ -1,0 +1,12 @@
+---
+import { Image } from 'astro:assets';
+import AvatarImage from '@/assets/avatar.jpeg';
+import NavMenu from './NavMenu.astro';
+---
+
+<header class="flex items-center justify-between pt-6 px-2">
+  <a href="/" class="flex w-9 h-9 border rounded-full shadow-sm overflow-hidden">
+    <Image src={AvatarImage} alt="Paranoid_K" width={96} />
+  </a>
+  <NavMenu />
+</header>
