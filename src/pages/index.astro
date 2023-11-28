@@ -2,23 +2,13 @@
 import '@fontsource/anton';
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import Social from '@/components/Social.astro';
+import List from '@/components/List.astro';
 import IconArrowUpRight from '@/assets/icon-arrow-up-right.svg?raw';
 
-import { getCollection, type CollectionEntry } from 'astro:content';
-import { format, compareDesc } from 'date-fns';
+import { getCollectionList } from '@/libs/collection';
 
-const getLatest = (collections: CollectionEntry<'blog' | 'weekly'>[]) =>
-  collections
-    .sort((a, b) => compareDesc(new Date(a.data.date), new Date(b.data.date)))
-    .map((item) => ({
-      slug: item.slug,
-      title: item.data.title,
-      date: item.data.date.toISOString().slice(0, 10),
-    }))
-    .slice(0, 5);
-
-const weeklies = getLatest(await getCollection('weekly'));
-const blogs = getLatest(await getCollection('blog'));
+const weeklies = (await getCollectionList('weekly')).slice(0, 5);
+const blogs = (await getCollectionList('blog')).slice(0, 5);
 ---
 
 <BaseLayout>
@@ -49,18 +39,7 @@ const blogs = getLatest(await getCollection('blog'));
         <Fragment set:html={IconArrowUpRight} />
       </a>
     </div>
-    <ul class="mt-4">
-      {
-        weeklies.map((item) => (
-          <li class="px-3 py-2 mt-1 rounded-md transition-colors hover:bg-gray-100">
-            <a class="flex items-center justify-between space-x-2" href={`/weekly/${item.slug}`}>
-              <span>{item.title}</span>
-              <span class="flex-shrink-0 text-sm text-gray-400 font-mono">{item.date}</span>
-            </a>
-          </li>
-        ))
-      }
-    </ul>
+    <List list={weeklies} className="mt-4" />
   </div>
   <div class="mt-8">
     <div class="flex items-center justify-between px-3">
@@ -69,17 +48,6 @@ const blogs = getLatest(await getCollection('blog'));
         <Fragment set:html={IconArrowUpRight} />
       </a>
     </div>
-    <ul class="mt-4">
-      {
-        blogs.map((item) => (
-          <li class="px-3 py-2 mt-1 rounded-md transition-colors hover:bg-gray-100">
-            <a class="flex items-center justify-between space-x-2" href={`/blog/${item.slug}`}>
-              <span>{item.title}</span>
-              <span class="flex-shrink-0 text-sm text-gray-400 font-mono">{item.date}</span>
-            </a>
-          </li>
-        ))
-      }
-    </ul>
+    <List list={blogs} className="mt-4" />
   </div>
 </BaseLayout>

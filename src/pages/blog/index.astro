@@ -1,0 +1,19 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import List from '@/components/List.astro';
+import { getCollectionList } from '@/libs/collection';
+
+const weeklies = await getCollectionList('blog');
+---
+
+<BaseLayout>
+  <Fragment slot="head">
+    <title>Paranoid_K's Blog</title>
+  </Fragment>
+  <div class="pt-10 pb-6 px-3">
+    <h1 class="flex text-3xl text-black leading-normal tracking-wider font-bold font-[Lato]">
+      博客<span class="mx-1">·</span>Blog
+    </h1>
+  </div>
+  <List list={weeklies} />
+</BaseLayout>

@@ -1,0 +1,16 @@
+---
+const { list, className } = Astro.props;
+---
+
+<ul class={className}>
+  {
+    list.map((item) => (
+      <li class="px-3 py-2 mt-1 rounded-md transition-colors hover:bg-gray-100">
+        <a class="flex items-center justify-between space-x-2" href={item.url}>
+          <span>{item.title}</span>
+          <span class="flex-shrink-0 text-sm text-gray-400 font-mono">{item.date}</span>
+        </a>
+      </li>
+    ))
+  }
+</ul>
