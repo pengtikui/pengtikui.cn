@@ -2,15 +2,13 @@
 import '@fontsource-variable/inter';
 import Header from '@/components/Header.astro';
 import Footer from '@/components/Footer.astro';
-
-const { title } = Astro.props;
 ---
 
 <html lang="zh-CN">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>{title}</title>
+    <slot name="head" />
     <link rel="author" href="https://pengtikui.cn" />
     <meta name="author" content="Paranoid_K" />
   </head>

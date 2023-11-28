@@ -2,9 +2,30 @@
 import '@fontsource/anton';
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import Social from '@/components/Social.astro';
+import IconArrowUpRight from '@/assets/icon-arrow-up-right.svg?raw';
+
+import { getCollection, type CollectionEntry } from 'astro:content';
+import { format, compareDesc } from 'date-fns';
+
+const getLatest = (collections: CollectionEntry<'blog' | 'weekly'>[]) =>
+  collections
+    .sort((a, b) => compareDesc(new Date(a.data.date), new Date(b.data.date)))
+    .map((item) => ({
+      slug: item.slug,
+      title: item.data.title,
+      date: item.data.date.toISOString().slice(0, 10),
+    }))
+    .slice(0, 5);
+
+const weeklies = getLatest(await getCollection('weekly'));
+const blogs = getLatest(await getCollection('blog'));
 ---
 
 <BaseLayout>
+  <Fragment slot="head">
+    <title>Paranoid_K</title>
+    <meta name="description" content="Paranoid_K 的个人站点，关于前端、JavaScript 等" />
+  </Fragment>
   <div class="pt-10 pb-6 px-3">
     <h1 class="flex flex-col text-3xl text-black leading-normal tracking-wider font-[Anton]">
       <span>Hello,</span><span>I'm Paranoid_K</span>
@@ -20,5 +41,45 @@ import Social from '@/components/Social.astro';
       </p>
     </div>
     <Social />
+  </div>
+  <div class="mt-8">
+    <div class="flex items-center justify-between px-3">
+      <h2 class="font-medium text-xl text-gray-800">周刊</h2>
+      <a class="text-gray-400 transition-colors hover:text-gray-600" title="查看全部" href="/weekly">
+        <Fragment set:html={IconArrowUpRight} />
+      </a>
+    </div>
+    <ul class="mt-4">
+      {
+        weeklies.map((item) => (
+          <li class="px-3 py-2 mt-1 rounded-md transition-colors hover:bg-gray-100">
+            <a class="flex items-center justify-between space-x-2" href={`/weekly/${item.slug}`}>
+              <span>{item.title}</span>
+              <span class="flex-shrink-0 text-sm text-gray-400 font-mono">{item.date}</span>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+  <div class="mt-8">
+    <div class="flex items-center justify-between px-3">
+      <h2 class="font-medium text-xl text-gray-800">博客</h2>
+      <a class="text-gray-400 transition-colors hover:text-gray-600" title="查看全部" href="/blog">
+        <Fragment set:html={IconArrowUpRight} />
+      </a>
+    </div>
+    <ul class="mt-4">
+      {
+        blogs.map((item) => (
+          <li class="px-3 py-2 mt-1 rounded-md transition-colors hover:bg-gray-100">
+            <a class="flex items-center justify-between space-x-2" href={`/blog/${item.slug}`}>
+              <span>{item.title}</span>
+              <span class="flex-shrink-0 text-sm text-gray-400 font-mono">{item.date}</span>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
   </div>
 </BaseLayout>

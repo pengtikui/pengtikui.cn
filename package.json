@@ -9,15 +9,14 @@
     "preview": "astro preview"
   },
   "dependencies": {
+    "@astrojs/tailwind": "^5.0.2",
     "@fontsource-variable/inter": "^5.0.15",
     "@fontsource/anton": "^5.0.17",
-    "astro": "^3.6.0"
-  },
-  "devDependencies": {
-    "@astrojs/tailwind": "^5.0.2",
     "@tailwindcss/typography": "^0.5.10",
     "@types/node": "18.16.3",
+    "astro": "^3.6.0",
     "autoprefixer": "^10.4.16",
+    "date-fns": "^2.30.0",
     "postcss": "^8.4.31",
     "prettier": "^3.1.0",
     "prettier-plugin-astro": "^0.12.2",

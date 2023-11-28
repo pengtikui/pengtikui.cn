@@ -33,5 +33,5 @@ yarn-error.log*
 .idea
 .vscode
 
-# contentlayer
-.contentlayer
+# Astro
+.astro
