@@ -1,7 +1,7 @@
 ---
 title: 第47期：Next.js 不再扩展原生 fetch
 date: 2023-12-24
-description:
+description: 这是个本就不该出现的问题
 ---
 
 ![](/static/weekly/issue-47-cover.jpg)
