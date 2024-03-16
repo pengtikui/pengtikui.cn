@@ -6,7 +6,7 @@ import remarkExternalLinks from 'remark-external-links';
 
 export const Blog = defineDocumentType(() => ({
   name: 'Blog',
-  filePathPattern: './blog/**/index.md',
+  filePathPattern: './blog/**.md',
   contentType: 'mdx',
   fields: {
     title: {
@@ -32,18 +32,18 @@ export const Blog = defineDocumentType(() => ({
   computedFields: {
     url: {
       type: 'string',
-      resolve: (blog) => `/${blog._raw.sourceFileDir}`,
+      resolve: (blog) => `/blog/${blog._raw.sourceFileName.replace('.md', '')}`,
     },
     slug: {
       type: 'string',
-      resolve: (blog) => blog._raw.sourceFileDir.replace('blog/', ''),
+      resolve: (blog) => blog._raw.sourceFileName.replace('.md', ''),
     },
   },
 }));
 
 export const Weekly = defineDocumentType(() => ({
   name: 'Weekly',
-  filePathPattern: './weekly/**/index.md',
+  filePathPattern: './weekly/**.md',
   contentType: 'mdx',
   fields: {
     title: {
@@ -62,11 +62,11 @@ export const Weekly = defineDocumentType(() => ({
   computedFields: {
     url: {
       type: 'string',
-      resolve: (weekly) => `/${weekly._raw.sourceFileDir}`,
+      resolve: (weekly) => `/weekly/${weekly._raw.sourceFileName.replace('.md', '')}`,
     },
     slug: {
       type: 'string',
-      resolve: (weekly) => weekly._raw.sourceFileDir.replace('weekly/', ''),
+      resolve: (weekly) => weekly._raw.sourceFileName.replace('.md', ''),
     },
   },
 }));
