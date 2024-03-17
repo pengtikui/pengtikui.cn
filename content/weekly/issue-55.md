@@ -1,7 +1,7 @@
 ---
 title: 第55期：重新认识大模型
 date: 2024-03-17
-description:
+description: 大模型重塑 App Store
 ---
 
 ![](/static/weekly/issue-55-cover.jpg)
