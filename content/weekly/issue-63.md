@@ -1,7 +1,7 @@
 ---
 title: 第63期：React 19 之服务端组件
 date: 2024-06-02
-description:
+description: 拥抱服务端组件？
 ---
 
 ![](/static/weekly/issue-63-cover.jpg)
@@ -69,3 +69,5 @@ Next.js 发布了 15 RC 版，该版本支持了 React 19、React Compiler 等�
 #### [httpsok](https://github.com/httpsok/httpsok)
 
 一个 HTTPS 证书自动续签工具，支持 Nginx 、OpenResty 服务器，也支持多家云厂商的 CDN、OSS 等服务，可以帮你自动处理 HTTPS 证书的更新，同时支持公众号推送提醒。
+
+> 本期部分内容由 ChatGPT 生成
