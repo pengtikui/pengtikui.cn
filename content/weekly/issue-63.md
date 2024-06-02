@@ -50,7 +50,7 @@ async function Author({ id }) {
 
 #### [Let’s learn how modern JavaScript frameworks work by building one](https://nolanlawson.com/2023/12/02/lets-learn-how-modern-javascript-frameworks-work-by-building-one/)
 
-现代 JavaScript 框架是指 React、Vue 等框架，这些框架由一些共同点：响应式和不手动操作 DOM，本文通过自行实现一个框架来深入理解现代 JavaScript 框架的原理。
+现代 JavaScript 框架是指 React、Vue 等框架，这些框架有一些共同点：响应式和不手动操作 DOM，本文通过自行实现一个框架来深入理解现代 JavaScript 框架的原理。
 
 #### [Next.js 15 RC](https://nextjs.org/blog/next-15-rc)
 
