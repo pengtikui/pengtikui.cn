@@ -75,7 +75,7 @@ Token 一般是指 JSON Web Token，它是一种基于密钥的通用认证机�
 
 另外这里没有指定端口，那会自动使用默认值，HTTP 的默认端口是 80，HTTPS 的默认端口是 443。
 
-当两个 URL 的协议、域名和端口三者由任意一个不相同，则为跨域，比如在 `https://pengtikui.cn` 的页面中请求 `https://api.pengtikui.cn` 下的接口时，两者的域名不同，就会发生跨域。对于跨域的问题可以通过 CORS （跨源资源共享）来解决。
+当两个 URL 的协议、域名和端口三者有任意一个不相同，则为跨域，比如在 `https://pengtikui.cn` 的页面中请求 `https://api.pengtikui.cn` 下的接口时，两者的域名不同，就会发生跨域。对于跨域的问题可以通过 CORS （跨源资源共享）来解决。
 
 再以域名 `pengtikui.cn` 为例，其中 `.cn` 为一级域名，`pengtikui.cn` 为二级域名，`api.pengtikui.cn` 为三级域名，当两个 URL 的二级域名不相同或者协议不相同时，就会发生跨站。
 
