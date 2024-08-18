@@ -1,4 +1,4 @@
-import { defineDocumentType, makeSource } from '@contentlayer/source-files';
+import { defineDocumentType, makeSource } from 'contentlayer2/source-files';
 import rehypePrettyCode from 'rehype-pretty-code';
 import rehypeImgSize from 'rehype-img-size';
 import remarkGfm from 'remark-gfm';
@@ -79,6 +79,6 @@ export default makeSource({
       [rehypePrettyCode, { theme: 'github-dark' }],
       [rehypeImgSize, { dir: 'public' }],
     ],
-    remarkPlugins: [remarkGfm, remarkExternalLinks],
+    remarkPlugins: [remarkGfm as any, remarkExternalLinks as any],
   },
 });

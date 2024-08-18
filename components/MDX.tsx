@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import Image from 'next/image';
-import { useMDXComponent } from 'next-contentlayer/hooks';
+import { useMDXComponent } from 'next-contentlayer2/hooks';
 
 export interface MDXProps {
   code: string;
