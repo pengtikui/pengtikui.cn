@@ -8,7 +8,7 @@ description:
 
 富文本编辑器向来是前端的天坑之一，因为要处理各种 DOM 渲染、输入事件、输入法支持和浏览器兼容的问题，所以做出一个比较完善的编辑器是个工作量很大又很有难度的事。[Lexical](https://lexical.dev/) 是 Meta 开源的文本编辑器框架，它带来了一些新的思路，能够解决一些以往的痛点问题，注意它只是用于开发编辑器的框架，而不是编辑器本身。
 
-如果把传统的富文本编辑器，如 TinyMCE、UEditor 等，比做前端框架中的 jQuery 的话，那么 Lexical 就是 React。最大的区别就是 Lexical 不需要开发者手动去操作 DOM 节点，只需要关心编辑器的状态即可，Lexical 会自动把状态渲染为相应的 DOM 节点。
+如果把传统的富文本编辑器，如 TinyMCE、UEditor 等，比作前端框架中的 jQuery 的话，那么 Lexical 就是 React。最大的区别就是 Lexical 不需要开发者手动去操作 DOM 节点，只需要关心编辑器的状态即可，Lexical 会自动把状态渲染为相应的 DOM 节点。
 
 简单了解一下 Lexical 中的一些概念：
 
