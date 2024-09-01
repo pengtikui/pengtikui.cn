@@ -39,7 +39,7 @@ pnpm create rsbuild@latest
 
 ## 安装依赖
 
-安装 Lexical、Lexical 的 React 集成包和其他必须的包：
+安装 Lexical、Lexical 的 React 集成包和其他必需的包：
 
 ```bash
 pnpm add lexical @lexical/react @lexical/rich-text @lexical/selection @lexical/utils
