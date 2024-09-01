@@ -300,6 +300,6 @@ const formatQuote = () => {
 
 ## 总结
 
-上面我们实现的功能随便还比较简陋，但已经涉及到了 Lexical 大部分的重要概念，比如插件、Nodes、Selection 和 Command，现在只知道了怎么用它们，但还不知道它们具体是什么，另外你能注意到了 Lexical 内置的 API 有些是以 `$` 开头的，而有些又不是，这是为什么呢？下期就来详细讲讲。
+上面我们实现的功能虽然还比较简陋，但已经涉及到了 Lexical 大部分的重要概念，比如插件、Nodes、Selection 和 Command，现在只知道了怎么用它们，但还不知道它们具体是什么，另外你能注意到了 Lexical 内置的 API 有些是以 `$` 开头的，而有些又不是，这是为什么呢？下期就来详细讲讲。
 
 本项目的完整代码可以从 [lexical-demo](https://github.com/pengtikui/lexical-demo) 仓库看到，本期的可以参考 [feat: 01](https://github.com/pengtikui/lexical-demo/commit/98db099890f1e17fea9863c885aab3f93599c617) commit，后续每期的更新也会是一个 commit。
