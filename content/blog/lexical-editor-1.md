@@ -1,6 +1,6 @@
 ---
 title: 基于 Lexical 写个编辑器（一）
-date: 2024-08-31
+date: 2024-09-01
 description: 基于 Lexical 写个富文本编辑器
 tags:
   - Lexical
