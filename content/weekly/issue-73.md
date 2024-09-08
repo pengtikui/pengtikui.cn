@@ -6,6 +6,10 @@ description: 基于 Lexical 的富文本编辑器
 
 ![](/static/weekly/issue-73-cover.jpg)
 
+这期继续写编辑器，这期先不着急了解更多新概念和开发更多新功能，先把上期中涉及到概念做个总结，并且完善和补全已有的功能。由于内容较长，为了便于阅读，还是单独作为一篇文章发布，点击 [基于 Lexical 写个编辑器（二）](/weekly/issue-72) 查看吧，下面是本期的分享内容。
+
+<hr />
+
 ## 技术
 
 #### [Announcing Vue 3.5](https://blog.vuejs.org/posts/vue-3-5)
