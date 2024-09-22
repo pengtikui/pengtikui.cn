@@ -1,7 +1,7 @@
 ---
 title: 第74期：学会画架构图
 date: 2024-09-22
-description:
+description: 一图胜千言
 ---
 
 ![](/static/weekly/issue-74-cover.jpg)
