@@ -37,6 +37,8 @@ function Page({ commentsPromise }) {
 
 写到这才意识到了解 `use` 之前最好先了解一下服务端组件和客户端组件，顺序有点搞反了，下期就写服务端组件吧，当然如果你之前了解过 Next.js，那就不存在这个问题。
 
+<hr />
+
 ## 技术
 
 #### [Angular v18 正式发布！](https://mp.weixin.qq.com/s/eCN_czoHtDGSlYnJY637Yw)
