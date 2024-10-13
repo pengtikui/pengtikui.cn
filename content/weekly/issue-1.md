@@ -6,6 +6,8 @@ description: 这是我的周刊的第一期，我会在这分享近期看到的�
 
 这是我的周刊的第一期，我会在这分享近期看到的、学到的新奇好玩的东西或技术，内容包括但不仅限于前端技术、设计和 TMT 行业资讯等。
 
+<hr />
+
 ## 技术
 
 #### [Vercel 发布 Turbopack](https://vercel.com/blog/turbopack)

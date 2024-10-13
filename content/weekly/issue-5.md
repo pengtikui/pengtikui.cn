@@ -10,6 +10,8 @@ description: 又是居家办公的一周，感觉这周过的好快。
 
 今天尝试给自己的网站升级到 Next.js 13 的 `app` 目录，以使用 Server Components 等新特性，顺便引入 Contentlayer 和 TypeScript 以优化开发体验，但是每一步都不顺利，各种奇奇怪怪的报错，折腾了半天暂时搁置吧。
 
+<hr />
+
 ## 技术
 
 #### [CS 自学指南](https://csdiy.wiki)

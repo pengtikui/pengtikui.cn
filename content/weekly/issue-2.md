@@ -8,6 +8,8 @@ description: Serverless 会是未来的主流吗？为什么国外的 Serverless
 
 Serverless 会是未来的主流吗？为什么国外的 Severless 服务那么丰富，比如 Vercel、Cloudflare Workers、AWS Lambda、Planetscale 和 Upstash 等，从页面托管、函数服务，到数据库等都有选择，完全依赖 Serverless 开发一个大型项目完全不成问题，而国内却鲜有类似的服务。
 
+<hr />
+
 ## 技术
 
 #### [SpriteJS：图形库造轮子的那些事儿](https://juejin.cn/post/7163093447908261902)

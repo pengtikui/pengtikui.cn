@@ -16,6 +16,8 @@ Supabase 的功能包含数据库、身份验证、文件存储和边缘函数�
 
 二是它的产品理念，整个系统内的任何一部分都可独立运行、可扩展、可组合，比如用于身份验证的 GoTrue、用于提供 REST API 的 PostgREST、用于数据库操作的 postgres-meta 都是可独立使用或直接复用社区现有方案，可用于 Supabase 之外，并且每个服务都提供自己的 API 以便于用户进行扩展；另外更注重长期收益，比如 fork 一份 PostgreSQL 来扩展自己所需功能更方便，但 Supabase 选择支持社区上下游来实现缺失的功能，使整个社区都能受益，同时保证了项目的可移植性和长期性。
 
+<hr />
+
 ## 技术
 
 #### [JavaScript Patterns Workshop](https://javascriptpatterns.vercel.app)
