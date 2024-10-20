@@ -1,7 +1,7 @@
 ---
 title: 第76期：聊聊 antd 和 shadcn/ui
 date: 2024-10-20
-description:
+description: 很有意思的俩项目
 ---
 
 ![](/static/weekly/issue-76-cover.jpg)
