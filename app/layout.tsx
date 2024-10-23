@@ -13,7 +13,8 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: 'Paranoid_K',
-  description: 'Paranoid_K 的个人站点，关于前端、JavaScript 等',
+  description:
+    'Paranoid_K 的个人站点，关于前端、JavaScript 等 feedId:71212423303166976+userId:55175698340216832',
   authors: [{ name: 'Paranoid_K', url: 'https://pengtikui.cn' }],
   other: {
     'baidu-site-verification': 'codeva-vCZMO1BPzq',
