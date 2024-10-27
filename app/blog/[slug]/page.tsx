@@ -4,7 +4,8 @@ import MDX from '@/components/MDX';
 
 export const generateStaticParams = async () => allBlogs.map((item) => ({ slug: item.slug }));
 
-export const generateMetadata = async ({ params }) => {
+export const generateMetadata = async props => {
+  const params = await props.params;
   const blog = allBlogs.find((item) => item.slug === params.slug);
   return {
     title: `${blog.title} - Paranoid_K's Blog`,
@@ -13,7 +14,8 @@ export const generateMetadata = async ({ params }) => {
   };
 };
 
-export default async function Page({ params }) {
+export default async function Page(props) {
+  const params = await props.params;
   const blog = allBlogs.find((item) => item.slug === params.slug);
 
   if (!blog) {

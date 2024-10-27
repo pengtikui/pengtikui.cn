@@ -1,7 +1,7 @@
 ---
 title: 第70期：Lexical - 编辑器中的 React
 date: 2024-08-18
-description:
+description: 编辑器框架
 ---
 
 ![](/static/weekly/issue-70-cover.jpg)
