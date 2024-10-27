@@ -1,7 +1,7 @@
 ---
 title: 第77期：升级 Next.js 15
 date: 2024-10-27
-description: Next.js 15 升级记录
+description: 看看更新了哪些内容
 ---
 
 ![](/static/weekly/issue-77-cover.jpg)
