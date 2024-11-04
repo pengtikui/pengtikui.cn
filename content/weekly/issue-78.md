@@ -1,7 +1,7 @@
 ---
 title: 第78期：2024 前端现状
 date: 2024-11-04
-description:
+description: 简单看一下 State of Frontend 2024
 ---
 
 ![](/static/weekly/issue-78-cover.jpg)
