@@ -1,0 +1,35 @@
+---
+const LIST = [
+  {
+    title: '首页',
+    href: '/',
+  },
+  {
+    title: '博客',
+    href: '/blog',
+  },
+  {
+    title: '周刊',
+    href: '/weekly',
+  },
+  // {
+  //   title: '关于',
+  //   href: '/about',
+  // },
+];
+---
+
+<nav class="flex items-center justify-between pt-6 px-2">
+  <a href="/" class="flex shadow-sm rounded-full overflow-hidden border">
+    <img src="/avatar.jpeg" alt="Paranoid_K" width="34" height="34" />
+  </a>
+  <ul class="flex px-3 bg-white rounded-full shadow-lg shadow-gray-100 ring-1 ring-gray-100">
+    {
+      LIST.map((item) => (
+        <li class="px-3 py-2 text-sm text-gray-700 transition-colors hover:text-black">
+          <a href={item.href}>{item.title}</a>
+        </li>
+      ))
+    }
+  </ul>
+</nav> 

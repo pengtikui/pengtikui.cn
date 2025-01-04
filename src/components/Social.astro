@@ -1,0 +1,84 @@
+---
+import BrandGithub from '../assets/brand-github.svg';
+import BrandX from '../assets/brand-x.svg';
+import BrandWechat from '../assets/brand-wechat.svg';
+import Mail from '../assets/mail.svg';
+---
+
+<div class="mt-6 flex items-center space-x-3">
+  <a
+    class="block p-1.5 rounded-full text-white bg-[#171515] transition-opacity hover:opacity-75"
+    href="https://github.com/pengtikui"
+    target="_blank"
+    rel="noreferrer"
+    title="Github"
+  >
+    <BrandGithub width="20" height="20" />
+  </a>
+  <a
+    class="block p-1.5 rounded-full text-white bg-[#e86125] transition-colors hover:opacity-75"
+    href="mailto:pengtikui@gmail.com"
+    title="邮箱"
+  >
+    <Mail width="20" height="20" />
+  </a>
+  <a
+    class="block p-1.5 rounded-full text-white bg-[#0f1419] transition-colors hover:opacity-75"
+    href="https://x.com/pengtikui"
+    target="_blank"
+    rel="noreferrer"
+    title="X (Twitter)"
+  >
+    <BrandX width="20" height="20" />
+  </a>
+  <button
+    class="block p-1.5 rounded-full text-white bg-[#2aae67] cursor-pointer transition-colors hover:opacity-75"
+    title="微信"
+    id="wechat-btn"
+  >
+    <BrandWechat width="20" height="20" />
+  </button>
+</div>
+
+<div
+  id="wechat-modal"
+  class="fixed inset-0 bg-black/0 hidden items-center justify-center transition-all duration-200"
+>
+  <div class="bg-white p-2 rounded-2xl shadow-xl transition-all duration-200 scale-90 opacity-0">
+    <img src="/src/assets/wechat_qrcode.jpg" alt="WeChat QR Code" width="200" height="200" />
+  </div>
+</div>
+
+<script>
+  const btn = document.getElementById('wechat-btn');
+  const modal = document.getElementById('wechat-modal');
+  const modalContent = modal?.querySelector('div');
+
+  const showModal = () => {
+    modal?.classList.remove('hidden');
+    // 使用 setTimeout 确保 hidden 被移除后再添加动画类
+    setTimeout(() => {
+      modal?.classList.add('flex', 'bg-black/25');
+      modalContent?.classList.remove('scale-90', 'opacity-0');
+      modalContent?.classList.add('scale-100', 'opacity-100');
+    }, 0);
+  };
+
+  const hideModal = () => {
+    modalContent?.classList.remove('scale-100', 'opacity-100');
+    modalContent?.classList.add('scale-90', 'opacity-0');
+    modal?.classList.remove('bg-black/25');
+    // 等待动画完成后再隐藏模态框
+    setTimeout(() => {
+      modal?.classList.remove('flex');
+      modal?.classList.add('hidden');
+    }, 200);
+  };
+
+  btn?.addEventListener('click', showModal);
+  modal?.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      hideModal();
+    }
+  });
+</script> 

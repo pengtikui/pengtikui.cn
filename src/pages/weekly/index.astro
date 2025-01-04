@@ -1,0 +1,21 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from "../../layouts/Layout.astro";
+import List from "../../components/List.astro";
+import { extraList } from "../../utils/content";
+
+const blogList = extraList(await getCollection('post', ({ id }) => id.startsWith('weekly/')));
+---
+
+<Layout>
+  <div class="pt-10 pb-6 px-3">
+    <h1 class="flex flex-col font-lato font-bold text-3xl text-black leading-normal tracking-wider">
+      周刊 / Weekly
+    </h1>
+    <p class="mt-4 text-gray-600 text-sm leading-relaxed">
+      我会在这分享近期看到的、学到的新奇好玩的东西或技术，内容包括但不仅限于前端技术、设计和 TMT
+      行业资讯等。
+    </p>
+  </div>
+  <List data={blogList} />
+</Layout>

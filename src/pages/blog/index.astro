@@ -1,0 +1,17 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from "../../layouts/Layout.astro";
+import List from "../../components/List.astro";
+import { extraList } from "../../utils/content";
+
+const blogList = extraList(await getCollection('post', ({ id }) => id.startsWith('blog/')));
+---
+
+<Layout>
+  <div class="pt-10 pb-6 px-3">
+    <h1 class="flex flex-col font-lato font-bold text-3xl text-black leading-normal tracking-wider">
+      博客 / Blog
+    </h1>
+  </div>
+  <List data={blogList} />
+</Layout>

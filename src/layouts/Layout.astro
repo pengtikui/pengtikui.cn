@@ -1,0 +1,43 @@
+---
+import Menu from '../components/Menu.astro';
+import Footer from '../components/Footer.astro';
+
+import '@fontsource-variable/inter';
+import '@fontsource/anton';
+import '@fontsource/lato/700.css';
+
+import inter from '@fontsource-variable/inter/files/inter-latin-wght-normal.woff2?url';
+import anton from '@fontsource/anton/files/anton-latin-400-normal.woff2?url';
+import lato from '@fontsource/lato/files/lato-latin-700-normal.woff2?url';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { title = 'Paranoid_K', description = 'Paranoid_K 的个人站点，关于前端、JavaScript 等' } =
+  Astro.props;
+---
+
+
+<!doctype html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="description" content={description} />
+		<meta name="baidu-site-verification" content="codeva-vCZMO1BPzq" />
+		<meta name="author" content="Paranoid_K" />
+		<link rel="icon" href="/favicon.ico" />
+		<title>{title}</title>
+		<link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href={inter} />
+		<link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href={anton} />
+		<link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href={lato} />
+	</head>
+	<body class="max-w-3xl mx-auto px-2">
+		<Menu />
+		<slot />
+		<Footer />
+		<script src="https://cdn.splitbee.io/sb.js" is:inline></script>
+	</body>
+</html>
