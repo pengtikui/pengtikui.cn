@@ -1,0 +1,4 @@
+User-Agent: *
+Allow: /
+
+Sitemap: https://pengtikui.cn/sitemap-index.xml

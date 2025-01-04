@@ -1,0 +1,60 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
+import Social from '../components/Social.astro';
+import List from '../components/List.astro';
+import { extraList } from '../utils/content';
+import ArrowUpRightIcon from '../assets/arrow-up-right.svg';
+
+
+const weeklyList = extraList(await getCollection('post', ({ id }) => id.startsWith('weekly/')), 5);
+const blogList = extraList(await getCollection('post', ({ id }) => id.startsWith('blog/')), 5);
+---
+
+<Layout>
+  <div class="pt-10 pb-6 px-3">
+    <h1 class="flex flex-col font-anton text-3xl text-black leading-normal tracking-wider">
+      <span>Hello,</span>
+      <span>I'm Paranoid_K</span>
+    </h1>
+    <div class="mt-6 text-gray-900 space-y-1.5">
+      <p>🧑‍💻 前端开发者 / Front-end Developer</p>
+      <p>🤩 正在做一些有趣的事 / Working on something interesting</p>
+      <p>
+        🥰
+        <a href="https://sotake.com" target="_blank" rel="noreferrer" class="hover:underline">sotake.com</a>
+        <span class="mx-1">·</span>
+        <a href="https://kee.so" target="_blank" rel="noreferrer" class="hover:underline">kee.so</a>
+      </p>
+    </div>
+    <Social />
+  </div>
+
+  <div class="mt-8">
+    <div class="flex items-center justify-between px-3">
+      <h2 class="font-medium text-xl text-gray-800">周刊</h2>
+      <a
+        class="text-gray-400 transition-colors hover:text-gray-600"
+        href="/weekly"
+        title="查看全部"
+      >
+        <ArrowUpRightIcon width="20" height="20" />
+      </a>
+    </div>
+    <List data={weeklyList} className="mt-4" />
+  </div>
+
+  <div class="mt-8">
+    <div class="flex items-center justify-between px-3">
+      <h2 class="font-medium text-xl text-gray-800">博客</h2>
+      <a
+        class="text-gray-400 transition-colors hover:text-gray-600"
+        href="/blog"
+        title="查看全部"
+      >
+        <ArrowUpRightIcon width="20" height="20" />
+      </a>
+    </div>
+    <List data={blogList} className="mt-4" />
+  </div>
+</Layout>

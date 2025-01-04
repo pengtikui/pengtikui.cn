@@ -1,0 +1,23 @@
+---
+interface Props {
+  data: {
+    title: string;
+    date: string;
+    url: string;
+  }[];
+  className?: string;
+}
+
+const { data, className } = Astro.props;
+---
+
+<ul class={className}>
+  {data.map((item) => (
+    <li class="px-3 py-2 mt-1 rounded-md transition-colors hover:bg-gray-100">
+      <a href={item.url} class="flex items-center justify-between space-x-2">
+        <span class="flex-grow text-gray-900 line-clamp-1">{item.title}</span>
+        <span class="flex-shrink-0 text-sm text-gray-400 font-mono">{item.date}</span>
+      </a>
+    </li>
+  ))}
+</ul> 
