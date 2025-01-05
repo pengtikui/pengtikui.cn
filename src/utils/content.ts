@@ -7,6 +7,6 @@ export const extraList = (list: CollectionEntry<'post'>[], count?: number) => {
     .map((item) => ({
       title: item.data.title,
       date: format(item.data.date, 'yyyy-MM-dd'),
-      url: item.id,
+      url: `/${item.id}`,
     }));
 };
