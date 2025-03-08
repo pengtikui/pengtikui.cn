@@ -3,7 +3,6 @@ import { type CollectionEntry, getCollection, render } from 'astro:content';
 import { format } from 'date-fns';
 import Layout from '../../layouts/Layout.astro';
 
-
 export async function getStaticPaths() {
 	const posts = await getCollection('post', ({ id }: CollectionEntry<'post'>) => id.startsWith('weekly/'));
 	return posts.map((post: CollectionEntry<'post'>) => ({
@@ -16,7 +15,10 @@ const { post } = Astro.props as { post: CollectionEntry<'post'> };
 const { Content } = await render(post);
 ---
 
-<Layout>
+<Layout
+  title={`${post.data.title} - Paranoid_K's Weekly`}
+  description={post.data.description}
+>
   <div class="flex flex-col items-center px-2 pt-12 pb-8">
     <h1 class="font-medium text-2xl">{post.data.title}</h1>
     <p class="mt-2 text-gray-500 text-sm font-mono">{format(post.data.date, 'yyyy-MM-dd')}</p>

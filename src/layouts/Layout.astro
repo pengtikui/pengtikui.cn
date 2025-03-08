@@ -14,10 +14,14 @@ import lato from '@fontsource/lato/files/lato-latin-700-normal.woff2?url';
 interface Props {
   title?: string;
   description?: string;
+	keywords?: string;
 }
 
-const { title = 'Paranoid_K', description = 'Paranoid_K 的个人站点，关于前端、JavaScript 等' } =
-  Astro.props;
+const {
+	title = 'Paranoid_K',
+	description = 'Paranoid_K 的个人站点，关于前端、JavaScript 等',
+	keywords = 'Paranoid_K, pengtikui, 前端, 博客, 周刊',
+} = Astro.props;
 ---
 
 
@@ -27,6 +31,7 @@ const { title = 'Paranoid_K', description = 'Paranoid_K 的个人站点，关于
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="description" content={description} />
+		<meta name="keywords" content={keywords} />
 		<meta name="baidu-site-verification" content="codeva-vCZMO1BPzq" />
 		<meta name="author" content="Paranoid_K" />
 		<link rel="icon" href="/favicon.ico" />

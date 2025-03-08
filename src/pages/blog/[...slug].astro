@@ -15,7 +15,11 @@ const { post } = Astro.props as { post: CollectionEntry<'post'> };
 const { Content } = await render(post);
 ---
 
-<Layout>
+<Layout
+  title={`${post.data.title} - Paranoid_K's Blog`}
+  description={post.data.description}
+  keywords={post.data.tags?.join(', ') ?? ''}
+>
   <div class="flex flex-col items-center px-2 pt-12 pb-8">
     <h1 class="font-medium text-2xl">{post.data.title}</h1>
     <p class="mt-2 text-gray-500 text-sm font-mono">{format(post.data.date, 'yyyy-MM-dd')}</p>
