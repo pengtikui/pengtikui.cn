@@ -9,16 +9,14 @@
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.2.1",
-    "@fontsource-variable/inter": "^5.1.1",
-    "@fontsource/anton": "^5.1.1",
-    "@fontsource/lato": "^5.1.1",
-    "astro": "^5.1.2",
+    "@fontsource-variable/inter": "^5.2.5",
+    "@fontsource/anton": "^5.2.5",
+    "@fontsource/lato": "^5.2.5",
+    "@tailwindcss/typography": "^0.5.16",
+    "@tailwindcss/vite": "^4.0.12",
+    "astro": "^5.4.2",
     "date-fns": "^4.1.0",
-    "rehype-external-links": "^3.0.0"
-  },
-  "devDependencies": {
-    "@astrojs/tailwind": "^5.1.4",
-    "@tailwindcss/typography": "^0.5.15",
-    "tailwindcss": "^3.4.17"
+    "rehype-external-links": "^3.0.0",
+    "tailwindcss": "^4.0.12"
   }
 }

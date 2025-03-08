@@ -1,0 +1,28 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --font-sans: 'Inter Variable', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --font-anton: Anton;
+  --font-lato: Lato;
+}
+
+code::before {
+  display: none;
+}
+code::after {
+  display: none;
+}
+blockquote p:first-of-type::before {
+  display: none;
+}
+blockquote p:last-of-type::after {
+  display: none;
+}
+p:first-child > img {
+  margin-top: 0;
+  box-shadow: 0 10px 14px rgba(0, 0, 0, 0.2);
+}
+p, li {
+  text-align: justify;
+}

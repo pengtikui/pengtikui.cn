@@ -1,7 +1,7 @@
 import { defineConfig } from 'astro/config';
-import tailwind from '@astrojs/tailwind';
 import sitemap from '@astrojs/sitemap';
 import rehypeExternalLinks from 'rehype-external-links';
+import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
   site: 'https://pengtikui.cn',
@@ -18,10 +18,12 @@ export default defineConfig({
     ],
   },
   integrations: [
-    tailwind(),
     sitemap(),
   ],
   experimental: {
     svg: true,
+  },
+  vite: {
+    plugins: [tailwindcss()],
   },
 });
