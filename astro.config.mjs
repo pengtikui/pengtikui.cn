@@ -20,9 +20,6 @@ export default defineConfig({
   integrations: [
     sitemap(),
   ],
-  experimental: {
-    svg: true,
-  },
   vite: {
     plugins: [tailwindcss()],
   },

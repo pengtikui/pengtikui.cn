@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets'
 const LIST = [
   {
     title: '首页',
@@ -17,7 +18,7 @@ const LIST = [
 
 <nav class="flex items-center justify-between pt-6 px-2">
   <a href="/" class="flex shadow-sm rounded-full overflow-hidden border border-white">
-    <img src="/avatar.jpeg" alt="Paranoid_K" width="34" height="34" />
+    <Image src="/avatar.jpeg" alt="Paranoid_K" width="34" height="34" loading="eager" />
   </a>
   <ul class="flex px-3 bg-white rounded-full shadow-lg shadow-gray-100 ring-1 ring-gray-100">
     {

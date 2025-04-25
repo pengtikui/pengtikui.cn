@@ -37,6 +37,7 @@ const blogList = extraList(await getCollection('post', ({ id }) => id.startsWith
         class="text-gray-400 transition-colors hover:text-gray-600"
         href="/weekly"
         title="查看全部"
+        aria-label="查看全部"
       >
         <ArrowUpRightIcon width="20" height="20" />
       </a>
@@ -51,6 +52,7 @@ const blogList = extraList(await getCollection('post', ({ id }) => id.startsWith
         class="text-gray-400 transition-colors hover:text-gray-600"
         href="/blog"
         title="查看全部"
+        aria-label="查看全部"
       >
         <ArrowUpRightIcon width="20" height="20" />
       </a>
