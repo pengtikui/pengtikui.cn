@@ -66,7 +66,7 @@ Lexical 的目的也是类似的，`$` 开头的函数都是可以**直接操作
 
 这里我们新增有序列表和无序列表两种，分别对应 HTML 中的 ol 和 ul 元素。首先需要安装 `@lexical/list`，它提供了列表相关的节点类型和插入删除列表的命令。
 
-```base
+```bash
 pnpm add @lexical/list
 ```
 
