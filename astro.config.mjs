@@ -2,7 +2,7 @@ import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 import { satteri } from '@astrojs/markdown-satteri';
 import tailwindcss from '@tailwindcss/vite';
-import { paperTheme, codeBlockFrame } from './src/utils/shiki.mjs';
+import { paperTheme } from './src/utils/shiki.mjs';
 import { externalLinks } from './src/utils/external-links.mjs';
 
 export default defineConfig({
@@ -13,7 +13,6 @@ export default defineConfig({
     }),
     shikiConfig: {
       theme: paperTheme,
-      transformers: [codeBlockFrame],
     },
   },
   integrations: [

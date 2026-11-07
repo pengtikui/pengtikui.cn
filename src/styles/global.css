@@ -262,11 +262,11 @@
   margin: 0 auto;
 }
 
-.article figure:not(.code-block) {
+.article figure {
   margin: 24px 0;
 }
 
-.article figure:not(.code-block) figcaption {
+.article figure figcaption {
   margin-top: 8px;
   font-size: 13px;
   line-height: 20px;
@@ -366,54 +366,19 @@
 }
 
 /* 代码块 */
-.article .code-block {
+.article pre {
   margin: 24px 0;
+  padding: 16px 20px;
   border: 1px solid var(--color-line);
   border-radius: 10px;
   background: #fafafa;
-  overflow: hidden;
-}
-
-.code-block-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  height: 44px;
-  padding: 0 14px 0 16px;
-  border-bottom: 1px solid var(--color-line);
-}
-
-.code-block-lang {
-  font-family: var(--font-mono);
-  font-size: 12px;
-  color: #8a8a8a;
-}
-
-.code-block-copy {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  font-size: 12px;
-  color: #8a8a8a;
-  cursor: pointer;
-  transition: color 150ms;
-}
-
-.code-block-copy:hover {
-  color: var(--color-ink);
-}
-
-.article .code-block pre {
-  margin: 0;
-  padding: 16px 20px;
-  background: transparent !important;
+  overflow-x: auto;
   font-family: var(--font-mono);
   font-size: 13px;
   line-height: 23px;
   tab-size: 2;
 }
 
-.article .code-block pre code {
+.article pre code {
   font-family: inherit;
 }

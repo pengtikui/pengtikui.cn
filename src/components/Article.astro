@@ -75,26 +75,3 @@ const { back, title, meta, tags = [], prev, next, prevLabel, nextLabel } = Astro
     )
   }
 </article>
-
-<script>
-  const RESET_DELAY = 1500;
-
-  document.addEventListener('click', async (event) => {
-    const button = (event.target as HTMLElement | null)?.closest<HTMLButtonElement>('.code-block-copy');
-    if (!button) return;
-
-    const code = button.closest('.code-block')?.querySelector('pre')?.textContent ?? '';
-    const label = button.querySelector('.code-block-copy-text');
-
-    try {
-      await navigator.clipboard.writeText(code);
-      if (label) label.textContent = '已复制';
-    } catch {
-      if (label) label.textContent = '复制失败';
-    }
-
-    window.setTimeout(() => {
-      if (label) label.textContent = '复制';
-    }, RESET_DELAY);
-  });
-</script>
