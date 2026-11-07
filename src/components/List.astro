@@ -5,19 +5,23 @@ interface Props {
     date: string;
     url: string;
   }[];
-  className?: string;
+  class?: string;
 }
 
-const { data, className } = Astro.props;
+const { data, class: className } = Astro.props;
 ---
 
 <ul class={className}>
-  {data.map((item) => (
-    <li class="px-3 py-2 mt-1 rounded-md transition-colors hover:bg-gray-100">
-      <a href={item.url} class="flex items-center justify-between space-x-2">
-        <span class="flex-grow text-gray-900 line-clamp-1">{item.title}</span>
-        <span class="flex-shrink-0 text-sm text-gray-400 font-mono">{item.date}</span>
-      </a>
-    </li>
-  ))}
-</ul> 
+  {
+    data.map((item) => (
+      <li>
+        <a href={item.url} class="group flex items-baseline justify-between gap-4 py-2.5">
+          <span class="min-w-0 truncate text-[15px] leading-6 text-ink underline decoration-transparent underline-offset-4 transition-colors group-hover:decoration-[#c4c4c4]">
+            {item.title}
+          </span>
+          <span class="shrink-0 font-mono text-[13px] text-subtle">{item.date}</span>
+        </a>
+      </li>
+    ))
+  }
+</ul>

@@ -1,30 +1,46 @@
 ---
-import { type CollectionEntry, getCollection, render } from 'astro:content';
-import { format } from 'date-fns';
+import { render } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
+import Article from '../../components/Article.astro';
+import { type Post, getBlogPosts, getSlug, getUrl, formatLongDate } from '../../utils/content';
 
 export async function getStaticPaths() {
-	const posts = await getCollection('post', ({ id }: CollectionEntry<'post'>) => id.startsWith('blog/'));
-	return posts.map((post: CollectionEntry<'post'>) => ({
-		params: { slug: post.id.split('/').slice(1).join('/') },
-		props: { post },
-	}));
+  const posts = await getBlogPosts();
+  // posts 按日期倒序：后一项更早，前一项更新
+  return posts.map((post, index) => ({
+    params: { slug: getSlug(post) },
+    props: { post, older: posts[index + 1], newer: posts[index - 1] },
+  }));
 }
 
-const { post } = Astro.props as { post: CollectionEntry<'post'> };
+interface Props {
+  post: Post;
+  older?: Post;
+  newer?: Post;
+}
+
+const { post, older, newer } = Astro.props;
 const { Content } = await render(post);
+
+const toLink = (item?: Post) => (item ? { title: item.data.title, href: getUrl(item) } : undefined);
 ---
 
 <Layout
   title={`${post.data.title} - Paranoid_K's Blog`}
   description={post.data.description}
   keywords={post.data.tags?.join(', ') ?? ''}
+  active="blog"
 >
-  <div class="flex flex-col items-center px-2 pt-12 pb-8">
-    <h1 class="font-medium text-2xl">{post.data.title}</h1>
-    <p class="mt-2 text-gray-500 text-sm font-mono">{format(post.data.date, 'yyyy-MM-dd')}</p>
-  </div>
-  <article class="px-2 prose max-w-none">
+  <Article
+    back={{ title: '博客', href: '/blog' }}
+    title={post.data.title}
+    meta={[formatLongDate(post.data.date)]}
+    tags={post.data.tags}
+    prev={toLink(older)}
+    next={toLink(newer)}
+    prevLabel="上一篇"
+    nextLabel="下一篇"
+  >
     <Content />
-  </article>
+  </Article>
 </Layout>

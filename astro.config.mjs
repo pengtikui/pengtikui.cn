@@ -2,13 +2,15 @@ import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 import rehypeExternalLinks from 'rehype-external-links';
 import tailwindcss from '@tailwindcss/vite';
+import { paperTheme, codeBlockFrame } from './src/utils/shiki.mjs';
 
 export default defineConfig({
   site: 'https://pengtikui.cn',
   markdown: {
     syntaxHighlight: 'shiki',
     shikiConfig: {
-      theme: 'github-dark',
+      theme: paperTheme,
+      transformers: [codeBlockFrame],
     },
     rehypePlugins: [
       [

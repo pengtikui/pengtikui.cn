@@ -1,0 +1,36 @@
+---
+import { formatDate } from '../utils/content';
+
+interface Props {
+  /** 每一期的发布日期 */
+  dates: Date[];
+  class?: string;
+}
+
+const { dates, class: className } = Astro.props;
+
+const WEEK = 7 * 24 * 60 * 60 * 1000;
+
+const times = dates.map((date) => date.getTime()).sort((a, b) => a - b);
+const start = times[0];
+const end = times[times.length - 1];
+
+// 每格代表一周：有发布的周是实心，空缺的周是浅色
+const weekCount = Math.round((end - start) / WEEK) + 1;
+const published = new Set(times.map((time) => Math.round((time - start) / WEEK)));
+const weeks = Array.from({ length: weekCount }, (_, index) => published.has(index));
+
+const startLabel = formatDate(new Date(start), 'yyyy.MM');
+const endLabel = formatDate(new Date(end), 'yyyy.MM');
+const ariaLabel = `周刊发布时间线：${formatDate(new Date(start), 'yyyy 年 M 月')}至${formatDate(new Date(end), 'yyyy 年 M 月')}，每格一周，共 ${dates.length} 期`;
+---
+
+<figure class={className} role="img" aria-label={ariaLabel}>
+  <div class="flex h-[22px] gap-px sm:gap-[2px]" aria-hidden="true">
+    {weeks.map((filled) => <span class:list={['flex-1', filled ? 'bg-ink' : 'bg-line']} />)}
+  </div>
+  <figcaption class="mt-3 flex items-center justify-between font-mono text-xs leading-4 text-subtle" aria-hidden="true">
+    <span>{startLabel}</span>
+    <span>{endLabel}</span>
+  </figcaption>
+</figure>

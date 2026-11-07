@@ -1,22 +1,50 @@
 ---
-import { getCollection } from 'astro:content';
-import Layout from "../../layouts/Layout.astro";
-import List from "../../components/List.astro";
-import { extraList } from "../../utils/content";
+import Layout from '../../layouts/Layout.astro';
+import WeeklyBarcode from '../../components/WeeklyBarcode.astro';
+import { getWeeklyPosts, getUrl, groupByYear, parseWeeklyTitle, formatDate } from '../../utils/content';
 
-const blogList = extraList(await getCollection('post', ({ id }) => id.startsWith('weekly/')));
+const posts = await getWeeklyPosts();
+
+const groups = groupByYear(posts, (post) => post.data.date).map(({ year, items }) => ({
+  year,
+  items: items.map((post) => ({
+    ...parseWeeklyTitle(post),
+    date: formatDate(post.data.date, 'MM.dd'),
+    url: getUrl(post),
+  })),
+}));
 
 const description = '我会在这分享近期看到的、学到的新奇好玩的东西或技术，内容包括但不仅限于前端技术、设计和 TMT 行业资讯等。';
 ---
 
-<Layout title="周刊 / Weekly - Paranoid_K" description={description}>
-  <div class="pt-10 pb-6 px-3">
-    <h1 class="flex flex-col font-lato font-bold text-3xl text-black leading-normal tracking-wider">
-      周刊 / Weekly
-    </h1>
-    <p class="mt-4 text-gray-600 text-sm leading-relaxed">
-      {description}
-    </p>
+<Layout title="周刊 / Weekly - Paranoid_K" description={description} active="weekly">
+  <h1 class="text-[24px] leading-[38px] sm:text-[28px] sm:leading-[42px] font-semibold tracking-tight text-ink">周刊</h1>
+  <p class="mt-3 text-sm leading-7 text-[#737373]">{description}</p>
+  <WeeklyBarcode class="mt-14" dates={posts.map((post) => post.data.date)} />
+
+  <div class="mt-14">
+    {
+      groups.map((group) => (
+        <section class="border-t border-line pt-6 pb-8 sm:grid sm:grid-cols-[96px_1fr] sm:pt-[19px]">
+          <header class="sm:pt-[9px]">
+            <h2 class="text-[22px] leading-6 font-semibold tracking-tight text-ink">{group.year}</h2>
+            <p class="mt-1.5 text-xs leading-4 text-subtle">{group.items.length} 期</p>
+          </header>
+          <ul class="mt-3 sm:mt-0">
+            {group.items.map((item) => (
+              <li>
+                <a href={item.url} class="group flex items-baseline gap-3 py-[9px]">
+                  <span class="w-8 shrink-0 font-mono text-[13px] text-subtle">{item.issue}</span>
+                  <span class="min-w-0 flex-1 truncate text-[15px] leading-6 text-ink underline decoration-transparent underline-offset-4 transition-colors group-hover:decoration-[#c4c4c4]">
+                    {item.title}
+                  </span>
+                  <span class="shrink-0 font-mono text-[13px] text-subtle">{item.date}</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </section>
+      ))
+    }
   </div>
-  <List data={blogList} />
 </Layout>
