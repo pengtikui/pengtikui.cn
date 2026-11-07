@@ -33,10 +33,10 @@ Next.js 13 中两种路由模式可以共存，但 App Router 的优先级高于
 | 文件          | 用途                                           | 对比 pages                                 |
 | ------------- | ---------------------------------------------- | ------------------------------------------ |
 | layout.tsx    | 当前路径及子路径的公用布局组件                 | 只能在 `_app.tsx` 中引用一个全局的布局组件 |
-| template.tsx  | 与 `layout.tsx` 类似，但路由变化时也会重新执行 | --                                         |
-| loading.tsx   | 页面组件加载时的 Loading 界面                  | --                                         |
-| not-found.tsx | 404 界面                                       | --                                         |
-| error.tsx     | React Error Boundary 的 fallback 组件          | --                                         |
+| template.tsx  | 与 `layout.tsx` 类似，但路由变化时也会重新执行 | —                                          |
+| loading.tsx   | 页面组件加载时的 Loading 界面                  | —                                          |
+| not-found.tsx | 404 界面                                       | —                                          |
+| error.tsx     | React Error Boundary 的 fallback 组件          | —                                          |
 | route.ts      | API 路由，同一目录下不能和 `page.tsx` 共存     | 只能写在 `pages/api` 目录下                |
 
 App Router 也移除了一些 Pages Router 中约定的文件：
@@ -87,7 +87,7 @@ ISR 是指增量静态生成，当网站有特别多的页面，并且使用 SSG
 
 ### App Router
 
-在 React 18 之前，React 应用的渲染都是重客户端的，即使是 SSR，也要在客户端执行繁重的水合操作。在 React 18 中引入了一个新的概念 -- React Server Components，即 React 服务端组件，简称 RSC，它可以在编译时或服务端运行。有了服务端组件，当然也有客户端组件与之对应，在组件文件的开头使用 `'use server'` 和 `'use client'` 指令来区分两种组件。
+在 React 18 之前，React 应用的渲染都是重客户端的，即使是 SSR，也要在客户端执行繁重的水合操作。在 React 18 中引入了一个新的概念 — React Server Components，即 React 服务端组件，简称 RSC，它可以在编译时或服务端运行。有了服务端组件，当然也有客户端组件与之对应，在组件文件的开头使用 `'use server'` 和 `'use client'` 指令来区分两种组件。
 
 > 关于 React 服务端组件的更多内容，可以参考文档 [React Essentials](https://nextjs.org/docs/getting-started/react-essentials)。
 

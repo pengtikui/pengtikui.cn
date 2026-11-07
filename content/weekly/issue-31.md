@@ -28,7 +28,7 @@ React 核心开发者、Redux 作者 Dan Abramov 宣布自己将在几周后从 
 
 #### [面向 WebAssembly 的 ByteReact 框架](https://mp.weixin.qq.com/s/-K2jRYakCkJA09yd4JRLJg)
 
-Web 前端框架不断在发展，各种新式框架都想方设法地做性能优化，但无论怎么优化都始终无法突破 JavaScript 引擎的速度局限，本文提出一个新的思路 -- 将代码编译成 WebAssembly，这样理论速度会有几倍的提升，并基于这个思路设计出了一个类 React 的框架。
+Web 前端框架不断在发展，各种新式框架都想方设法地做性能优化，但无论怎么优化都始终无法突破 JavaScript 引擎的速度局限，本文提出一个新的思路 — 将代码编译成 WebAssembly，这样理论速度会有几倍的提升，并基于这个思路设计出了一个类 React 的框架。
 
 ## 开源
 

@@ -6,7 +6,7 @@ description: 推荐《小而美：持续盈利的经营法则》
 
 ![](/static/weekly/issue-30-cover.jpg)
 
-因为微信，现在“小而美”好像快变成了个贬义词，但我这里要说的是个褒义词。最近在看（还没看完）[《小而美：持续盈利的经营法则》](https://book.douban.com/subject/36280425/) -- [Gumroad](https://gumroad.com) 创始人萨希尔·拉文吉亚写的一本书，这本书的英文原名是《The Minimalist Entrepreneur: How Great Founders Do More with Less》，我觉得 Minimalist 和 Do More with Less 这几个词是对“小而美”最好的解释。
+因为微信，现在“小而美”好像快变成了个贬义词，但我这里要说的是个褒义词。最近在看（还没看完）[《小而美：持续盈利的经营法则》](https://book.douban.com/subject/36280425/) — [Gumroad](https://gumroad.com) 创始人萨希尔·拉文吉亚写的一本书，这本书的英文原名是《The Minimalist Entrepreneur: How Great Founders Do More with Less》，我觉得 Minimalist 和 Do More with Less 这几个词是对“小而美”最好的解释。
 
 这本书的核心内容是：不是每个企业都能成为独角兽，企业应该发现自身的核心能力并创造出价值，进而实现持续盈利。现在越来越多的人成为了独立开发者，我觉得这本书对独立开发者或想要成为独立开发者的人都有一定的参考意义，一个人也可以是一个“企业”。
 

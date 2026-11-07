@@ -1,23 +1,20 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
-import rehypeExternalLinks from 'rehype-external-links';
+import { satteri } from '@astrojs/markdown-satteri';
 import tailwindcss from '@tailwindcss/vite';
 import { paperTheme, codeBlockFrame } from './src/utils/shiki.mjs';
+import { externalLinks } from './src/utils/external-links.mjs';
 
 export default defineConfig({
   site: 'https://pengtikui.cn',
   markdown: {
-    syntaxHighlight: 'shiki',
+    processor: satteri({
+      hastPlugins: [externalLinks],
+    }),
     shikiConfig: {
       theme: paperTheme,
       transformers: [codeBlockFrame],
     },
-    rehypePlugins: [
-      [
-        rehypeExternalLinks,
-        { rel: ['nofollow', 'noopener', 'noreferrer'], target: '_blank' },
-      ],
-    ],
   },
   integrations: [
     sitemap(),
